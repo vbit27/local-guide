@@ -4,7 +4,7 @@ export const MapStyle = [
     elementType: 'geometry',
     stylers: [
       {
-        color: '#DBDBDB',
+        color: '#bed4e9',
       },
       {
         lightness: 17,
@@ -16,7 +16,7 @@ export const MapStyle = [
     elementType: 'geometry',
     stylers: [
       {
-        color: '#f5f5f5',
+        color: '#e5e5e5',
       },
       {
         lightness: 20,

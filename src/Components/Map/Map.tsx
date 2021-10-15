@@ -17,13 +17,15 @@ const center = {
 const options = {
   styles: MapStyle,
   zoomCotrol: true,
-  disableDefaultUI: true,
+  // disableDefaultUI: true,
 };
+
+//const libraries: any = ['places'];
 
 const Map = () => {
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY!,
-    libraries: ['places'],
+    // libraries: libraries,
   });
 
   useEffect(() => {
@@ -42,6 +44,7 @@ const Map = () => {
           lat: 39.8744907,
           lng: 19.9987613,
         }}
+        options={options}
       ></GoogleMap>
     </div>
   );

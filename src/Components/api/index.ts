@@ -29,18 +29,18 @@ export async function getData() {
     });
 
     */
-
+  /*
   var config = {
     //method: 'get',
     // url: `http://example.com`,
-    url: `https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffee+shop&location=35.792491,-78.653009&radius=2000&region=us&type=cafe,bakery&key=${process.env.REACT_APP_GOOGLE_KEY}`,
+    url: `http://localhost:8010/proxy/maps/api/place/textsearch/json?query=coffee+shop&location=35.792491,-78.653009&radius=2000&region=us&type=cafe,bakery&key=${process.env.REACT_APP_GOOGLE_KEY}`,
 
     headers: {
       'access-control-allow-credentials': 'true',
       'access-control-allow-headers': 'ver',
       'access-control-allow-methods': 'GET, POST',
       'access-control-allow-origin': '*',
-      connection: 'keep-alive',
+      // connection: 'keep-alive',
     },
   };
 
@@ -52,14 +52,16 @@ export async function getData() {
       console.log(error);
     });
 
+    */
   //////
 
-  /*  try {
+  try {
     const response = await axios.get(
-      `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key=${process.env.REACT_APP_GOOGLE_KEY}`
+      // 'https://catfact.ninja/fact'
+      `http://localhost:8010/proxy/maps/api/place/findplacefromtext/json?input=%2B16502530000&inputtype=phonenumber&key=${process.env.REACT_APP_GOOGLE_KEY}`
     );
     console.log(response);
   } catch (error) {
     console.log(error);
-  }*/
+  }
 }
