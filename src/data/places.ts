@@ -1,9 +1,9 @@
-// Restaurant url: https://maps.googleapis.com/maps/api/place/details/json?place_id=ADD_PLACE_ID&fields=name%2Cformatted_address%2Ctype%2Curl%2Cinternational_phone_number%2Crating%2Cprice_level&key=AIzaSyDqkIi7UVpXvcUyb0eWH3p-ebnD0dn2Yhg}
+// Restaurant url: https://maps.googleapis.com/maps/api/place/details/json?place_id=ADD_PLACE_ID&fields=name%2Caddress%2Ctype%2Curl%2Cphone_number%2Crating%2Cprice_level&key=AIzaSyDqkIi7UVpXvcUyb0eWH3p-ebnD0dn2Yhg}
 
 export const restaurants = [
   {
-    formatted_address: 'Rruga Idriz Alidhima, Sarandë, Albania',
-    international_phone_number: '+355 69 786 1816',
+    address: 'Rruga Idriz Alidhima, Sarandë, Albania',
+    phone_number: '+355 69 786 1816',
     name: 'Taverna Erjoni',
     rating: 4.4,
     types: ['restaurant', 'food', 'point_of_interest', 'establishment'],
@@ -15,8 +15,8 @@ export const restaurants = [
     },
   },
   {
-    formatted_address: 'Rruga Jonianet 38, Sarandë, Albania',
-    international_phone_number: '+355 69 279 1713',
+    address: 'Rruga Jonianet 38, Sarandë, Albania',
+    phone_number: '+355 69 279 1713',
     name: 'Taverna Garden',
     price_level: 1,
     rating: 4.6,
@@ -29,8 +29,8 @@ export const restaurants = [
     },
   },
   {
-    formatted_address: 'Rruga Adem Sheme 11, Sarandë, Albania',
-    international_phone_number: '+355 69 968 7919',
+    address: 'Rruga Adem Sheme 11, Sarandë, Albania',
+    phone_number: '+355 69 968 7919',
     name: 'Fast Food Cuci',
     rating: 4.8,
     types: ['restaurant', 'food', 'point_of_interest', 'establishment'],
@@ -42,7 +42,7 @@ export const restaurants = [
     },
   },
   {
-    formatted_address: 'Rruga Mitat Hoxha 49, Sarandë, Albania',
+    address: 'Rruga Mitat Hoxha 49, Sarandë, Albania',
     name: 'Onhezmi Lounge Bar',
     rating: 4.5,
     types: ['cafe', 'food', 'point_of_interest', 'establishment'],
@@ -57,8 +57,8 @@ export const restaurants = [
 
 export const bars = [
   {
-    formatted_address: 'Shëtitorja Naim Frashëri, Sarandë 9701, Albania',
-    international_phone_number: '+355 67 715 1845',
+    address: 'Shëtitorja Naim Frashëri, Sarandë 9701, Albania',
+    phone_number: '+355 67 715 1845',
     name: 'Jericho Cocktail Bar',
     rating: 4.5,
     types: ['bar', 'point_of_interest', 'establishment'],

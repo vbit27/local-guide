@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { MapStyle } from './MapStyle';
 import GoogleMapReact from 'google-map-react';
-import { getData } from '../api/index';
-import { GoogleMap, useLoadScript } from '@react-google-maps/api';
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import { restaurants } from '../data/places';
 
 const style = {
   width: '100%',
@@ -28,10 +28,6 @@ const Map = () => {
     // libraries: libraries,
   });
 
-  useEffect(() => {
-    getData();
-  }, []);
-
   if (loadError) return <div>'Error loading map'</div>;
   if (!isLoaded) return <div>Loading...'</div>;
 
@@ -45,7 +41,16 @@ const Map = () => {
           lng: 19.9987613,
         }}
         options={options}
-      ></GoogleMap>
+      >
+        {restaurants.map((restaurant) => (
+          <Marker
+            position={{
+              lat: restaurant.location.lat,
+              lng: restaurant.location.lng,
+            }}
+          />
+        ))}
+      </GoogleMap>
     </div>
   );
 };

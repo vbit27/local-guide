@@ -1,23 +1,15 @@
 import React from 'react';
 import './App.css';
-import Map from './Components/Map/Map';
+import Map from './Explore/Map';
 import { CssBaseline, Grid } from '@mui/material';
-import Header from './Components/Header/Header';
-import List from './Components/List/List';
+import Header from './shared/Header';
+import List from './Explore/List';
+import Explore from './Explore/Explore';
 
 function App() {
   return (
     <>
-      <CssBaseline />
-      <Header />
-      <Grid container spacing={3} style={{ width: '100%' }}>
-        <Grid item xs={12} md={4}>
-          <List />
-        </Grid>
-        <Grid item xs={12} md={8}>
-          <Map />
-        </Grid>
-      </Grid>
+      <Explore />
     </>
   );
 }

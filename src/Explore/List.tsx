@@ -6,19 +6,24 @@ import {
   Select,
   Typography,
 } from '@mui/material';
-import React from 'react';
-import { restaurants } from '../Map/restaurants/restaurants';
-import PlaceCard from '../PlaceCard/PlaceCard';
+import React, { useState } from 'react';
+import { restaurants } from '../data/places';
+import PlaceCard from './PlaceCard';
 
 const places = [{ name: 'restaurants' }, { name: 'beers' }];
 
-const List = () => {
+const List: React.FC = () => {
+  const [type, setType] = useState('restaurants');
+
   return (
     <div>
       <Typography variant={'h6'}>What are you looking for?</Typography>
       <FormControl sx={{ m: 1, width: 300 }}>
         <InputLabel>Type</InputLabel>
-        <Select>
+        <Select
+          defaultValue={'restaurants'}
+          onChange={(e) => setType(e.target.value)}
+        >
           <MenuItem value={'restaurants'}>Restaurants</MenuItem>
           <MenuItem value={'bars'}>Bars</MenuItem>
         </Select>
