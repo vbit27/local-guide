@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { MapStyle } from './MapStyle';
-import GoogleMapReact from 'google-map-react';
 import {
   GoogleMap,
   useLoadScript,
   Marker,
   InfoWindow,
 } from '@react-google-maps/api';
-import { restaurants } from '../data/places';
+import { restaurants, bars } from '../data/places';
 
 const style = {
   width: '100%',
@@ -25,8 +24,8 @@ const options = {
   // disableDefaultUI: true,
 };
 
-const Map = () => {
-  const [selectedPlace, setSelectedPlace] = useState<Place | undefined>(
+const Map: React.FC<MapProp> = ({ places }) => {
+  const [selectedPlace, setSelectedPlace] = useState<Places | undefined>(
     undefined
   );
 
@@ -48,16 +47,15 @@ const Map = () => {
         }}
         options={options}
       >
-        {restaurants.map((restaurant) => (
+        {places.map((place: Places) => (
           <Marker
-            key={restaurant.id}
+            key={place.id}
             position={{
-              lat: restaurant.location.lat,
-              lng: restaurant.location.lng,
+              lat: place.location.lat,
+              lng: place.location.lng,
             }}
             onClick={() => {
-              setSelectedPlace(restaurant);
-              console.log(restaurant);
+              setSelectedPlace(place);
             }}
           />
         ))}
@@ -80,34 +78,8 @@ const Map = () => {
   );
 };
 
-const plac = {
-  address: 'Rruga Idriz Alidhima, Sarandë, Albania',
-  phone_number: '+355 69 786 1816',
-  name: 'Taverna Erjoni',
-  rating: 4.4,
-  price_level: 1,
-  types: ['restaurant', 'food', 'point_of_interest', 'establishment'],
-  url: 'https://maps.google.com/?cid=8223485386262412288',
-  id: 'ChIJnyzbtioVWxMRAHzJj2OwH3I',
-  location: {
-    lat: 39.8748685,
-    lng: 19.988761,
-  },
-};
-
-interface Place {
-  address: string;
-  phone_number?: string;
-  name: string;
-  rating?: number;
-  price_level?: number;
-  types: string[];
-  url: string;
-  id: string;
-  location: {
-    lat: number;
-    lng: number;
-  };
+interface MapProp {
+  places: any;
 }
 
 export default Map;

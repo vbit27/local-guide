@@ -7,7 +7,7 @@ import {
 } from '@mui/material';
 import React from 'react';
 
-const PlaceCard = () => {
+const PlaceCard: React.FC = () => {
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>

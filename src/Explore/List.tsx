@@ -6,15 +6,11 @@ import {
   Select,
   Typography,
 } from '@mui/material';
-import React, { useState } from 'react';
-import { restaurants } from '../data/places';
+import React, { useEffect, useState } from 'react';
+import { restaurants, bars } from '../data/places';
 import PlaceCard from './PlaceCard';
 
-const places = [{ name: 'restaurants' }, { name: 'beers' }];
-
-const List: React.FC = () => {
-  const [type, setType] = useState('restaurants');
-
+const List: React.FC<ListProp> = ({ updatePlaces, places }) => {
   return (
     <div>
       <Typography variant={'h6'}>What are you looking for?</Typography>
@@ -22,14 +18,16 @@ const List: React.FC = () => {
         <InputLabel>Type</InputLabel>
         <Select
           defaultValue={'restaurants'}
-          onChange={(e) => setType(e.target.value)}
+          onChange={(e) => {
+            updatePlaces(e.target.value);
+          }}
         >
           <MenuItem value={'restaurants'}>Restaurants</MenuItem>
           <MenuItem value={'bars'}>Bars</MenuItem>
         </Select>
       </FormControl>
       <Grid container spacing={3}>
-        {places.map((place) => (
+        {places.map((place: any) => (
           <Grid item xs={12}>
             <Typography variant={'h5'}> {place.name}</Typography>
             <PlaceCard />
@@ -39,5 +37,10 @@ const List: React.FC = () => {
     </div>
   );
 };
+
+interface ListProp {
+  updatePlaces: (choice: string) => void;
+  places: Places[];
+}
 
 export default List;
