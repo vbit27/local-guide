@@ -6,6 +6,7 @@ export const restaurants = [
     phone_number: '+355 69 786 1816',
     name: 'Taverna Erjoni',
     rating: 4.4,
+    price_level: 1,
     types: ['restaurant', 'food', 'point_of_interest', 'establishment'],
     url: 'https://maps.google.com/?cid=8223485386262412288',
     id: 'ChIJnyzbtioVWxMRAHzJj2OwH3I',
