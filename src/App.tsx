@@ -1,16 +1,21 @@
 import React from 'react';
 import './App.css';
-import Map from './Explore/Map';
-import { CssBaseline, Grid } from '@mui/material';
-import Header from './shared/Header';
-import List from './Explore/List';
 import Explore from './Explore/Explore';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import Header from './shared/Header';
+import Info from './Info/Info';
 
 function App() {
   return (
-    <>
-      <Explore />
-    </>
+    <Router>
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Explore} />
+          <Route exact path="/info" component={Info} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

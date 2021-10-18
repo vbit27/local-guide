@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -14,9 +15,15 @@ export default function Header() {
             Local Guide
           </Typography>
 
-          <Button color="inherit">Home</Button>
-          <Button color="inherit">Explore</Button>
-          <Button color="inherit">Info</Button>
+          <Button component={Link} to={'/'} color="inherit">
+            Home
+          </Button>
+          <Button component={Link} to={'/explore'} color="inherit">
+            Explore
+          </Button>
+          <Button component={Link} to={'/info'} color="inherit">
+            Info
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>
