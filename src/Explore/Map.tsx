@@ -9,6 +9,7 @@ import {
 import { restaurants, bars } from '../data/places';
 import { Button } from '@mui/material';
 import AssistantDirectionIcon from '@mui/icons-material/AssistantDirection';
+import googleMapReact from 'google-map-react';
 
 const style = {
   width: '100%',
@@ -26,7 +27,7 @@ const options = {
   // disableDefaultUI: true,
 };
 
-const Map: React.FC<MapProp> = ({ places }) => {
+const Map: React.FC<MapProp> = ({ places, setSelectedMarker }) => {
   const [selectedPlace, setSelectedPlace] = useState<Places | undefined>(
     undefined
   );
@@ -41,7 +42,7 @@ const Map: React.FC<MapProp> = ({ places }) => {
   return (
     <div>
       <GoogleMap
-        mapContainerStyle={{ height: '100vh', width: '100%' }}
+        mapContainerStyle={{ height: '93vh', width: '100%' }}
         zoom={15}
         center={{
           lat: 39.8744907,
@@ -49,7 +50,7 @@ const Map: React.FC<MapProp> = ({ places }) => {
         }}
         options={options}
       >
-        {places.map((place: Places) => (
+        {places.map((place: Places, i: number) => (
           <Marker
             key={place.id}
             position={{
@@ -58,6 +59,7 @@ const Map: React.FC<MapProp> = ({ places }) => {
             }}
             onClick={() => {
               setSelectedPlace(place);
+              setSelectedMarker(i);
             }}
           />
         ))}
@@ -80,7 +82,7 @@ const Map: React.FC<MapProp> = ({ places }) => {
                 <p> Price: {selectedPlace.price_level}</p>
               ) : null}
               <Button
-                variant="outlined"
+                variant="text"
                 size="small"
                 onClick={() => window.open(selectedPlace.url, '_blank')}
               >
@@ -95,7 +97,8 @@ const Map: React.FC<MapProp> = ({ places }) => {
 };
 
 interface MapProp {
-  places: any;
+  places: Places[];
+  setSelectedMarker: (index: number) => void;
 }
 
 export default Map;

@@ -13,10 +13,14 @@ import AddLocationIcon from '@mui/icons-material/AddLocation';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import React from 'react';
 
-const PlaceCard: React.FC<PlaceCardProp> = ({ place }) => {
+const PlaceCard: React.FC<PlaceCardProp> = ({ place, selected, refProp }) => {
+  // check if selected and scroll
+  if (selected)
+    refProp.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
   return (
     <>
-      <Card sx={{ maxWidth: 345 }} elevation={0}>
+      <Card sx={{ maxWidth: '400' }} style={{ padding: '1rem' }} elevation={0}>
         <CardActionArea>
           <CardMedia
             component="img"
@@ -92,6 +96,8 @@ const PlaceCard: React.FC<PlaceCardProp> = ({ place }) => {
 
 interface PlaceCardProp {
   place: Places;
+  refProp: React.RefObject<HTMLDivElement>;
+  selected: boolean;
 }
 
 export default PlaceCard;

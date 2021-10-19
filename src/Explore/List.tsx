@@ -6,9 +6,28 @@ import {
   Select,
   Typography,
 } from '@mui/material';
+import { createRef, useEffect, useRef, useState } from 'react';
 import PlaceCard from './PlaceCard';
 
-const List: React.FC<ListProp> = ({ updatePlaces, places }) => {
+const List: React.FC<ListProp> = ({ updatePlaces, places, selectedMarker }) => {
+  const [elRefs, setElRefs] = useState<React.RefObject<HTMLDivElement>[]>([]);
+
+  //create an array of refs
+  useEffect(() => {
+    setElRefs(
+      Array(places?.length)
+        .fill(undefined)
+        .map((_, i) => createRef<HTMLDivElement>())
+    );
+  }, [places]);
+
+  useEffect(() => {
+    console.log({ elRefs });
+  }, [elRefs]);
+
+  console.log(elRefs);
+
+  console.log(selectedMarker);
   return (
     <div>
       <Typography variant={'h6'}>What are you looking for?</Typography>
@@ -24,10 +43,15 @@ const List: React.FC<ListProp> = ({ updatePlaces, places }) => {
           <MenuItem value={'bars'}>Bars</MenuItem>
         </Select>
       </FormControl>
-      <Grid container spacing={3}>
-        {places.map((place: Places) => (
-          <Grid item xs={12}>
-            <PlaceCard place={place} />
+      <Grid container spacing={3} style={{ height: '80vh', overflow: 'auto' }}>
+        {places.map((place: Places, i) => (
+          <Grid item xs={12} ref={elRefs[i]}>
+            <PlaceCard
+              place={place}
+              key={place.id}
+              refProp={elRefs[i]}
+              selected={selectedMarker === i}
+            />
           </Grid>
         ))}
       </Grid>
@@ -38,6 +62,7 @@ const List: React.FC<ListProp> = ({ updatePlaces, places }) => {
 interface ListProp {
   updatePlaces: (choice: string) => void;
   places: Places[];
+  selectedMarker: number | undefined;
 }
 
 export default List;
