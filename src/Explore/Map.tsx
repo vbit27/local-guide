@@ -7,6 +7,8 @@ import {
   InfoWindow,
 } from '@react-google-maps/api';
 import { restaurants, bars } from '../data/places';
+import { Button } from '@mui/material';
+import AssistantDirectionIcon from '@mui/icons-material/AssistantDirection';
 
 const style = {
   width: '100%',
@@ -69,7 +71,21 @@ const Map: React.FC<MapProp> = ({ places }) => {
             onCloseClick={() => setSelectedPlace(undefined)}
           >
             <div>
-              <h5>{selectedPlace.name}</h5>
+              <h4 style={{ display: 'flex', justifyContent: 'space-around' }}>
+                {selectedPlace.name}
+              </h4>
+              {selectedPlace.types ? <p>{selectedPlace.types[0]}</p> : null}
+
+              {selectedPlace.price_level ? (
+                <p> Price: {selectedPlace.price_level}</p>
+              ) : null}
+              <Button
+                variant="outlined"
+                size="small"
+                onClick={() => window.open(selectedPlace.url, '_blank')}
+              >
+                Get Directions
+              </Button>
             </div>
           </InfoWindow>
         )}
