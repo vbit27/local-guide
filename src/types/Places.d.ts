@@ -5,7 +5,7 @@ interface Places {
   rating?: number;
   price_level?: string;
   description: string;
-  types?: string[];
+  types: string[];
   url: string;
   id: string;
   location: {

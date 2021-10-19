@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { MapStyle } from './MapStyle';
 import {
   GoogleMap,
@@ -6,10 +6,8 @@ import {
   Marker,
   InfoWindow,
 } from '@react-google-maps/api';
-import { restaurants, bars } from '../data/places';
 import { Button } from '@mui/material';
-import AssistantDirectionIcon from '@mui/icons-material/AssistantDirection';
-import googleMapReact from 'google-map-react';
+import { bars } from '../data/places';
 
 const style = {
   width: '100%',
@@ -60,6 +58,10 @@ const Map: React.FC<MapProp> = ({ places, setSelectedMarker }) => {
             onClick={() => {
               setSelectedPlace(place);
               setSelectedMarker(i);
+            }}
+            icon={{
+              url: `../icons/${place.types[0]}.svg`,
+              scaledSize: new window.google.maps.Size(35, 35),
             }}
           />
         ))}

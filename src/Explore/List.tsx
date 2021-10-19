@@ -6,7 +6,7 @@ import {
   Select,
   Typography,
 } from '@mui/material';
-import { createRef, useEffect, useRef, useState } from 'react';
+import { createRef, useEffect, useState } from 'react';
 import PlaceCard from './PlaceCard';
 
 const List: React.FC<ListProp> = ({ updatePlaces, places, selectedMarker }) => {
@@ -21,13 +21,6 @@ const List: React.FC<ListProp> = ({ updatePlaces, places, selectedMarker }) => {
     );
   }, [places]);
 
-  useEffect(() => {
-    console.log({ elRefs });
-  }, [elRefs]);
-
-  console.log(elRefs);
-
-  console.log(selectedMarker);
   return (
     <div>
       <Typography variant={'h6'}>What are you looking for?</Typography>

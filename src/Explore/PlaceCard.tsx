@@ -66,9 +66,9 @@ const PlaceCard: React.FC<PlaceCardProp> = ({ place, selected, refProp }) => {
 
               {place.types ? (
                 <Chip
-                  key={place.types[0]}
-                  label={place.types[0]}
-                  size="small"
+                  key={place.types[1]}
+                  label={place.types[1]}
+                  size="medium"
                 />
               ) : null}
 

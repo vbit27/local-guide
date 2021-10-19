@@ -7,7 +7,7 @@ export const restaurants = [
     name: 'Taverna Erjoni',
     rating: 4.4,
     price_level: '$',
-    types: ['Mediterranean'],
+    types: ['restaurant', 'Mediterranean'],
     url: 'https://maps.google.com/?cid=8223485386262412288',
     id: 'ChIJnyzbtioVWxMRAHzJj2OwH3I',
     description:
@@ -23,7 +23,7 @@ export const restaurants = [
     name: 'Taverna Garden',
     price_level: '$',
     rating: 4.6,
-    types: ['Mediterranean'],
+    types: ['restaurant', 'Mediterranean'],
     url: 'https://maps.google.com/?cid=404154598749224308',
     id: 'ChIJAYN0ZPkUWxMRdL3JXHfYmwU',
     description:
@@ -39,7 +39,7 @@ export const restaurants = [
     name: 'Fast Food Cuci',
     rating: 4.8,
     price_level: '$',
-    types: ['Fast-Food'],
+    types: ['restaurant', 'Fast-Food'],
     url: 'https://maps.google.com/?cid=14878851165164447503',
     id: 'ChIJ08FsgmQVWxMRD6eInU1MfM4',
     description: 'A great place for grilled chicken or a souvlaki',
@@ -52,7 +52,7 @@ export const restaurants = [
     address: 'Rruga Mitat Hoxha 49, Sarandë, Albania',
     name: 'Onhezmi Lounge Bar',
     rating: 4.5,
-    types: ['Traditional'],
+    types: ['restaurant', 'Traditional'],
     price_level: '$',
     url: 'https://maps.google.com/?cid=6942685553138264899',
     location: {
@@ -72,7 +72,7 @@ export const bars = [
     name: 'Jericho Cocktail Bar',
     rating: 4.5,
     price_level: '$$',
-    types: ['Cocktails'],
+    types: ['bar', 'Cocktails'],
     url: 'https://maps.google.com/?cid=13624261783785041750',
     location: {
       lat: 39.8736492,
