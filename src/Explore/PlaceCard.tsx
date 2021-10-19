@@ -1,37 +1,97 @@
 import {
+  Box,
   Button,
   Card,
+  CardActionArea,
   CardContent,
   CardMedia,
+  Chip,
   Typography,
 } from '@mui/material';
+import AssistantDirectionIcon from '@mui/icons-material/AssistantDirection';
+import AddLocationIcon from '@mui/icons-material/AddLocation';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import React from 'react';
 
-const PlaceCard: React.FC = () => {
+const PlaceCard: React.FC<PlaceCardProp> = ({ place }) => {
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          component="img"
-          height="140"
-          image="../images/seafood.jpg"
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-        <Button size="small" color="primary">
-          Google Maps
-        </Button>
+      <Card sx={{ maxWidth: 345 }} elevation={0}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="140"
+            image="../images/seafood.jpg"
+            alt="green iguana"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {place.name}
+            </Typography>
+            <Typography variant="body2" paragraph>
+              {place.description}
+            </Typography>
+            {place.address ? (
+              <Box display="flex" justifyContent="space-between">
+                <AddLocationIcon fontSize="small" color="disabled" />
+                <Typography variant="body2" color="textSecondary" paragraph>
+                  {place.address}
+                </Typography>
+              </Box>
+            ) : null}
+            {place.phone_number ? (
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                onClick={() => {
+                  window.open(`tel:${place.phone_number}`);
+                }}
+              >
+                <LocalPhoneIcon fontSize="small" color="disabled" />
+                <Typography variant="body2" color="textSecondary" paragraph>
+                  {place.phone_number}
+                </Typography>
+              </Box>
+            ) : null}
+            <Box display="flex" justifyContent="space-between">
+              {place.price_level ? (
+                <Typography variant="subtitle2">
+                  Price: {place.price_level}
+                </Typography>
+              ) : null}
+
+              {place.types ? (
+                <Chip
+                  key={place.types[0]}
+                  label={place.types[0]}
+                  size="small"
+                />
+              ) : null}
+
+              {place.rating ? (
+                <Typography gutterBottom variant="subtitle2">
+                  Rating: {place.rating}
+                </Typography>
+              ) : null}
+            </Box>
+          </CardContent>
+          <Button
+            variant="contained"
+            size="small"
+            color="primary"
+            style={{ float: 'right' }}
+            onClick={() => window.open(place.url, '_blank')}
+          >
+            <AssistantDirectionIcon color="inherit" fontSize="medium" />
+          </Button>
+        </CardActionArea>
       </Card>
     </>
   );
 };
+
+interface PlaceCardProp {
+  place: Places;
+}
 
 export default PlaceCard;

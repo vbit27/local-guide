@@ -6,8 +6,6 @@ import {
   Select,
   Typography,
 } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import { restaurants, bars } from '../data/places';
 import PlaceCard from './PlaceCard';
 
 const List: React.FC<ListProp> = ({ updatePlaces, places }) => {
@@ -27,10 +25,9 @@ const List: React.FC<ListProp> = ({ updatePlaces, places }) => {
         </Select>
       </FormControl>
       <Grid container spacing={3}>
-        {places.map((place: any) => (
+        {places.map((place: Places) => (
           <Grid item xs={12}>
-            <Typography variant={'h5'}> {place.name}</Typography>
-            <PlaceCard />
+            <PlaceCard place={place} />
           </Grid>
         ))}
       </Grid>
