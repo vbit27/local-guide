@@ -22,7 +22,7 @@ const center = {
 const options = {
   styles: MapStyle,
   zoomCotrol: true,
-  // disableDefaultUI: true,
+  disableDefaultUI: true,
 };
 
 const Map: React.FC<MapProp> = ({ places, setSelectedMarker }) => {
@@ -43,8 +43,8 @@ const Map: React.FC<MapProp> = ({ places, setSelectedMarker }) => {
         mapContainerStyle={{ height: '93vh', width: '100%' }}
         zoom={15}
         center={{
-          lat: 39.8744907,
-          lng: 19.9987613,
+          lat: 39.872331,
+          lng: 20.002352,
         }}
         options={options}
       >

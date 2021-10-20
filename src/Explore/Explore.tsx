@@ -4,7 +4,7 @@ import { CssBaseline, Grid } from '@mui/material';
 import List from './List';
 import { bars, restaurants } from '../data/places';
 
-const Home = () => {
+const Explore: React.FC<ExploreProps> = ({ showMap }) => {
   const [places, setPlaces] = useState<Places[]>(restaurants);
   const [selectedMarker, setSelectedMarker] = useState<number | undefined>(
     undefined
@@ -30,15 +30,21 @@ const Home = () => {
             selectedMarker={selectedMarker}
           />
         </Grid>
-        <Grid item xs={12} md={8}>
-          <Map
-            places={places}
-            setSelectedMarker={(index: number) => setSelectedMarker(index)}
-          />
-        </Grid>
+        {showMap && (
+          <Grid item xs={12} md={8}>
+            <Map
+              places={places}
+              setSelectedMarker={(index: number) => setSelectedMarker(index)}
+            />
+          </Grid>
+        )}
       </Grid>
     </>
   );
 };
 
-export default Home;
+interface ExploreProps {
+  showMap: boolean;
+}
+
+export default Explore;

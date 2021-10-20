@@ -5,8 +5,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import { FormControlLabel, FormGroup, Switch } from '@mui/material';
+import { Label } from '@mui/icons-material';
 
-export default function Header() {
+export const Header: React.FC<HeaderProps> = ({ setShowMap }) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setShowMap(event.target.checked);
+  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -14,7 +19,12 @@ export default function Header() {
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             Local Guide
           </Typography>
-
+          <FormGroup sx={{ flexGrow: 1 }}>
+            <FormControlLabel
+              control={<Switch onChange={(e) => handleChange(e)} />}
+              label="Map"
+            />
+          </FormGroup>
           <Button component={Link} to={'/'} color="inherit">
             Home
           </Button>
@@ -28,4 +38,8 @@ export default function Header() {
       </AppBar>
     </Box>
   );
+};
+
+interface HeaderProps {
+  setShowMap: (status: boolean) => void;
 }
