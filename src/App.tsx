@@ -4,6 +4,7 @@ import Explore from './Explore/Explore';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Header } from './shared/Header';
 import Info from './Info/Info';
+import Footer from './shared/Footer';
 
 function App() {
   const [showMap, setShowMap] = useState<boolean>(true);
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/info" component={Info} />
         </Switch>
       </div>
+      <Footer />
     </Router>
   );
 }
