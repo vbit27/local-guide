@@ -7,16 +7,13 @@ import Info from './Info/Info';
 import Footer from './shared/Footer';
 
 function App() {
-  const [showMap, setShowMap] = useState<boolean>(true);
-  console.log({ showMap });
-
   return (
     <Router>
-      <Header setShowMap={(status: boolean) => setShowMap(status)} />
+      <Header />
       <div>
         <Switch>
           <Route exact path="/">
-            <Explore showMap={showMap} />
+            <Explore />
           </Route>
           <Route exact path="/info" component={Info} />
         </Switch>

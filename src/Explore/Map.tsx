@@ -6,7 +6,7 @@ import {
   Marker,
   InfoWindow,
 } from '@react-google-maps/api';
-import { Button } from '@mui/material';
+import { Button, FormControlLabel, FormGroup, Switch } from '@mui/material';
 import { bars } from '../data/places';
 
 const style = {

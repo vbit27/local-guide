@@ -8,10 +8,7 @@ import { Link } from 'react-router-dom';
 import { FormControlLabel, FormGroup, Switch } from '@mui/material';
 import { Label } from '@mui/icons-material';
 
-export const Header: React.FC<HeaderProps> = ({ setShowMap }) => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setShowMap(event.target.checked);
-  };
+export const Header: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -19,12 +16,6 @@ export const Header: React.FC<HeaderProps> = ({ setShowMap }) => {
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             Local Guide
           </Typography>
-          <FormGroup sx={{ flexGrow: 1 }}>
-            <FormControlLabel
-              control={<Switch onChange={(e) => handleChange(e)} />}
-              label="Map"
-            />
-          </FormGroup>
           <Button component={Link} to={'/'} color="inherit">
             Home
           </Button>
@@ -40,6 +31,30 @@ export const Header: React.FC<HeaderProps> = ({ setShowMap }) => {
   );
 };
 
+/*
+
+/// Add the map toggle menu
+
+  const [showMap, setShowMap] = useState<boolean>(true);
+
+interface ExploreProps {
+  showMap: boolean;
+}
+
+setShowMap={(status: boolean) => setShowMap(status)}
+
 interface HeaderProps {
   setShowMap: (status: boolean) => void;
 }
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setShowMap(event.target.checked);
+  }
+
+          <FormGroup sx={{ flexGrow: 1 }}>
+            <FormControlLabel
+              control={<Switch onChange={(e) => handleChange(e)} />}
+              label="Map"
+            />
+          </FormGroup>
+*/
