@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import List from './List';
 import { bars, restaurants } from '../data/places';
+import { Header } from '../shared/Header';
 
 const Explore: React.FC = () => {
   const [places, setPlaces] = useState<Places[]>(restaurants);
@@ -28,6 +29,7 @@ const Explore: React.FC = () => {
   return (
     <>
       <CssBaseline />
+      <Header />
       <Grid container spacing={3} style={{ width: '100%' }}>
         <Grid item xs={12} md={4}>
           <List
