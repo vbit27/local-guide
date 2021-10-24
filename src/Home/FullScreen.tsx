@@ -1,6 +1,7 @@
-import { Button, Grid, Typography } from '@mui/material';
+import { Button } from '@mui/material';
 import React from 'react';
 import classes from './FullScreen.module.css';
+import MediaQuery from 'react-responsive';
 
 const FullScreen: React.FC = () => {
   return (
@@ -13,9 +14,12 @@ const FullScreen: React.FC = () => {
         </p>
         <Button>Explore</Button>
       </div>
-      <div className={classes.containerRight}>
-        <img src={'./images/seafood.jpg'} alt="sailing-boat" />
-      </div>
+
+      <MediaQuery minWidth={900}>
+        <div className={classes.containerRight}>
+          <img src={'./images/seafood.jpg'} alt="sailing-boat" />
+        </div>
+      </MediaQuery>
     </div>
   );
 };
