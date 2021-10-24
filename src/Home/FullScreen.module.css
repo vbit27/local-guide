@@ -19,8 +19,8 @@
 
 img {
   justify-self: end;
-  max-width: 100%;
-  min-width: 400px;
+  max-width: 85vw;
+  max-height: 85vh;
 }
 
 .title {

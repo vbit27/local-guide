@@ -15,9 +15,9 @@ const FullScreen: React.FC = () => {
         <Button>Explore</Button>
       </div>
 
-      <MediaQuery minWidth={900}>
+      <MediaQuery minWidth={1000}>
         <div className={classes.containerRight}>
-          <img src={'./images/seafood.jpg'} alt="sailing-boat" />
+          <img src={'./images/background2.jpg'} alt="sailing-boat" />
         </div>
       </MediaQuery>
     </div>
