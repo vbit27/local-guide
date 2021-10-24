@@ -9,13 +9,19 @@ const FullScreen: React.FC = () => {
   return (
     <div className={classes.grid}>
       <div className={classes.containerLeft}>
-        <h1 className={classes.title}>Experience Saranda like a local</h1>
+        <h1 className={classes.title}>
+          Experience Saranda as a <strong>local</strong>{' '}
+        </h1>
         <p className={classes.subtitle}>
           Experience Saranda as a local. Avoid tourist-traps and find the best
+          reccomandations out there Experience Saranda as a local. Avoid
+          tourist-traps and find the best reccomandations out there est
           reccomandations out there
         </p>
-        <ExploreBtn />
-        <ReadMoreBtn />
+        <div className={classes.containerButtons}>
+          <ExploreBtn />
+          <ReadMoreBtn />
+        </div>
       </div>
 
       <MediaQuery minWidth={1000}>

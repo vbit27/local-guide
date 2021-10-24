@@ -7,6 +7,10 @@
 }
 
 .containerLeft {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: left;
+  gap: 1rem;
   width: 100%;
   padding: 0 2rem;
 }
@@ -17,6 +21,12 @@
   flex-direction: row-reverse;
 }
 
+.containerButtons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
 img {
   justify-self: end;
   max-width: 85vw;
@@ -25,12 +35,15 @@ img {
 
 .title {
   font-size: 5rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
+  font-weight: 400;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
+  line-height: 32px;
+  letter-spacing: 2;
 }
 
 @media (max-width: 1300px) {
