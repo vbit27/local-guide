@@ -1,12 +1,15 @@
 import classes from './Home.module.css';
-import { Box, Button, Grid, Paper, Typography } from '@mui/material';
+import { Box, Grid, Paper, Typography } from '@mui/material';
 import React from 'react';
-import FullScreen from './FullScreen';
+import HeroSection from './HeroSection';
+import AboutSection from './AboutSection';
+import Button from '../shared/Button';
 
 const Home: React.FC = () => {
   return (
     <>
-      <FullScreen />
+      <HeroSection />
+      <AboutSection />
     </>
   );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
-import classes from './FullScreen.module.css';
+import classes from './HeroSection.module.css';
 import MediaQuery from 'react-responsive';
 import Button from '../shared/Button';
 
-const FullScreen: React.FC = () => {
+const HeroSection: React.FC = () => {
   return (
     <div className={classes.grid}>
       <div className={classes.containerLeft}>
@@ -17,7 +17,7 @@ const FullScreen: React.FC = () => {
           reccomandations out there
         </p>
         <div className={classes.containerButtons}>
-          <Button buttonStyle={'btn--main'}>Explore </Button>
+          <Button buttonStyle={'btn--main'}>Explore</Button>
           <Button buttonStyle={'btn--outline'}>Read More</Button>
         </div>
       </div>
@@ -31,4 +31,4 @@ const FullScreen: React.FC = () => {
   );
 };
 
-export default FullScreen;
+export default HeroSection;
