@@ -44,6 +44,7 @@ img {
   margin: 1rem 0;
   line-height: 32px;
   letter-spacing: 2;
+  max-width: 55ch;
 }
 
 @media (max-width: 1300px) {
@@ -53,7 +54,6 @@ img {
 
   .subtitle {
     font-size: 1rem;
-    width: 50ch;
   }
 }
 

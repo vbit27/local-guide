@@ -1,9 +1,7 @@
-import { Button } from '@mui/material';
 import React from 'react';
 import classes from './FullScreen.module.css';
 import MediaQuery from 'react-responsive';
-import ExploreBtn from '../shared/ExploreBtn';
-import ReadMoreBtn from '../shared/ReadMoreBtn';
+import Button from '../shared/Button';
 
 const FullScreen: React.FC = () => {
   return (
@@ -19,8 +17,8 @@ const FullScreen: React.FC = () => {
           reccomandations out there
         </p>
         <div className={classes.containerButtons}>
-          <ExploreBtn />
-          <ReadMoreBtn />
+          <Button buttonStyle={'btn--main'}>Explore </Button>
+          <Button buttonStyle={'btn--outline'}>Read More</Button>
         </div>
       </div>
 
