@@ -1,5 +1,7 @@
 .container {
   padding: 3rem 2rem 3rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .titleContainer {
@@ -11,28 +13,52 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 3rem;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .itemContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-  justify-items: center;
+  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
   gap: 3rem;
   padding: 3rem 3rem;
 }
 
+.imageContainer {
+  display: flex;
+}
+
 .itemContainer img {
+  width: 100%;
   max-width: 600px;
 }
 
 .textContainer {
   display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
   row-gap: 2rem;
+  justify-content: center;
 }
 
 .textContainer p {
   max-width: 60ch;
+  font-size: 18px;
+  line-height: 28px;
+  color: #566171;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 1200px) {
+  .itemContainer {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 3rem;
+    padding: 3rem 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .itemContainer {
+    padding: 3rem 0rem;
+  }
 }
