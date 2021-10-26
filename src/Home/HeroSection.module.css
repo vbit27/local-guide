@@ -1,5 +1,12 @@
-.grid {
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+}
+
+.grid {
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -7,18 +14,28 @@
 }
 
 .containerLeft {
+  padding: 2rem;
+}
+.gridLeft {
   display: grid;
   grid-template-columns: 1fr;
   align-items: left;
   gap: 1rem;
   width: 100%;
-  padding: 0 2rem;
 }
 
-.containerRight {
+.backgroundContainer {
   width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
+  height: 80%;
+  position: relative;
+}
+
+.imageContainer {
+  height: 100%;
+  position: relative;
+  background: url('/src/assets/images/background\ .jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .containerButtons {
@@ -28,9 +45,8 @@
 }
 
 img {
-  justify-self: end;
-  max-width: 85vw;
-  max-height: 85vh;
+  max-width: 100%;
+  max-height: fit-content;
 }
 
 .title {
@@ -44,16 +60,28 @@ img {
   margin: 1rem 0;
   line-height: 32px;
   letter-spacing: 2;
-  max-width: 55ch;
+  max-width: 60ch;
 }
 
 @media (max-width: 1300px) {
   .title {
-    font-size: 4rem;
+    font-size: 5rem;
+    text-align: center;
   }
 
   .subtitle {
     font-size: 1rem;
+    text-align: center;
+  }
+  .gridLeft {
+    justify-items: center;
+  }
+  .containerButtons {
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -64,9 +92,5 @@ img {
 
   .subtitle {
     font-size: 1rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
   }
 }
