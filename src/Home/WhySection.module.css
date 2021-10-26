@@ -1,0 +1,38 @@
+.container {
+  padding: 3rem 2rem 3rem 2rem;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.itemContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  justify-items: center;
+  gap: 3rem;
+  padding: 3rem 3rem;
+}
+
+.itemContainer img {
+  max-width: 600px;
+}
+
+.textContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+.textContainer p {
+  max-width: 60ch;
+}

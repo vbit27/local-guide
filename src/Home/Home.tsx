@@ -4,12 +4,14 @@ import React from 'react';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import Button from '../shared/Button';
+import WhySection from './WhySection';
 
 const Home: React.FC = () => {
   return (
     <>
       <HeroSection />
       <AboutSection />
+      <WhySection />
     </>
   );
 };
