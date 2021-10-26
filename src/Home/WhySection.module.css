@@ -1,4 +1,5 @@
 .container {
+  margin: 3rem 0;
   padding: 3rem 2rem 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -7,6 +8,7 @@
 .titleContainer {
   display: flex;
   justify-content: center;
+  padding: 2rem 0;
 }
 
 .grid {
@@ -14,7 +16,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   gap: 3rem;
   width: 80vw;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .itemContainer {
@@ -25,7 +27,14 @@
 }
 
 .imageContainer {
-  display: flex;
+  display: grid;
+}
+
+.first {
+  order: 1;
+}
+.second {
+  order: 2;
 }
 
 .itemContainer img {
@@ -62,6 +71,7 @@
   align-items: center;
   row-gap: 2rem;
   padding: 3rem 0;
+  margin: 3rem 0 0 0;
 }
 
 @media (max-width: 1200px) {
@@ -70,6 +80,14 @@
     grid-template-columns: minmax(200px, 1fr);
     gap: 2rem;
     padding: 3rem 3rem;
+  }
+
+  .first {
+    order: 0;
+  }
+
+  .second {
+    order: 0;
   }
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './WhySection.module.css';
 import World from '../assets/images/world.jpeg';
 import Button from '../shared/Button';
+import clsx from 'clsx';
 
 const WhySection: React.FC = () => {
   return (
@@ -25,10 +26,7 @@ const WhySection: React.FC = () => {
           </div>
         </div>
         <div className={classes.itemContainer}>
-          <div className={classes.imageContainer}>
-            <img src={World} alt="map" />
-          </div>
-          <div className={classes.textContainer}>
+          <div className={clsx(classes.textContainer, classes.second)}>
             <h2>Non-profit</h2>
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -36,12 +34,12 @@ const WhySection: React.FC = () => {
               elitr, sed diam nonumy eirmod tempor invidunt ut labore. Lorem
               ipsum dolor sit amet, consetetur sadips
             </p>
+          </div>
+          <div className={clsx(classes.imageContainer, classes.first)}>
+            <img src={World} alt="map" />
           </div>
         </div>{' '}
         <div className={classes.itemContainer}>
-          <div className={classes.imageContainer}>
-            <img src={World} alt="map" />
-          </div>
           <div className={classes.textContainer}>
             <h2>Non-profit</h2>
             <p>
@@ -50,6 +48,9 @@ const WhySection: React.FC = () => {
               elitr, sed diam nonumy eirmod tempor invidunt ut labore. Lorem
               ipsum dolor sit amet, consetetur sadips
             </p>
+          </div>
+          <div className={classes.imageContainer}>
+            <img src={World} alt="map" />
           </div>
         </div>
         <div className={classes.actionContainer}>
