@@ -52,8 +52,14 @@ const WhySection: React.FC = () => {
             </p>
           </div>
         </div>
+        <div className={classes.actionContainer}>
+          <div className={classes.actionWrapper}>
+            <h2>Ready to get started?</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur </p>
+            <Button buttonStyle={'btn--main'}>Explore</Button>
+          </div>
+        </div>
       </div>
-      <Button buttonStyle={'btn--main'}>Explore</Button>
     </div>
   );
 };
