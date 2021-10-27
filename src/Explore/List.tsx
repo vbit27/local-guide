@@ -1,6 +1,7 @@
 import {
   Box,
   FormControl,
+  FormControlLabel,
   Grid,
   InputLabel,
   MenuItem,
@@ -32,11 +33,19 @@ const List: React.FC<ListProp> = ({
 
   return (
     <div>
-      <Box sx={{ typography: 'h5', m: 2 }}>What are you looking for?</Box>
-      <FormControl sx={{ m: 2, width: 300 }}>
+      <Box
+        style={{ display: 'flex', justifyContent: 'space-between' }}
+        sx={{ typography: 'h5', m: 2 }}
+      >
+        What are you looking for?
         <MediaQuery maxWidth={900}>
-          <Switch onChange={handleChange} />
+          <FormControlLabel
+            control={<Switch defaultChecked onChange={handleChange} />}
+            label="Map View"
+          />
         </MediaQuery>
+      </Box>
+      <FormControl sx={{ m: 2, width: 300 }}>
         <InputLabel>Type</InputLabel>
         <Select
           defaultValue={'restaurants'}
@@ -52,7 +61,7 @@ const List: React.FC<ListProp> = ({
         container
         marginTop={2}
         spacing={7}
-        style={{ height: '80vh', overflow: 'auto' }}
+        style={{ height: '75vh', overflow: 'auto' }}
         className={classes.container}
       >
         {places.map((place: Places, i) => (

@@ -6,20 +6,24 @@ import { Header } from './shared/Header';
 import Info from './Info/Info';
 import Footer from './shared/Footer';
 import Home from './Home/Home';
+import { ThemeProvider } from '@mui/material';
+import { theme } from './theme';
 
 function App() {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/explore">
-            <Explore />
-          </Route>
-          <Route exact path="/info" component={Info} />
-        </Switch>
-      </div>
-      <Footer />
+      <ThemeProvider theme={theme}>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/explore">
+              <Explore />
+            </Route>
+            <Route exact path="/info" component={Info} />
+          </Switch>
+        </div>
+        <Footer />
+      </ThemeProvider>
     </Router>
   );
 }

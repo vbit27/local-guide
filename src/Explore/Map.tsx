@@ -6,7 +6,14 @@ import {
   Marker,
   InfoWindow,
 } from '@react-google-maps/api';
-import { Button, FormControlLabel, FormGroup, Switch } from '@mui/material';
+import {
+  Box,
+  Button,
+  FormControlLabel,
+  FormGroup,
+  Switch,
+  Typography,
+} from '@mui/material';
 import { bars } from '../data/places';
 import MediaQuery from 'react-responsive';
 
@@ -45,7 +52,10 @@ const Map: React.FC<MapProp> = ({
   return (
     <div>
       <GoogleMap
-        mapContainerStyle={{ height: '93vh', width: '100%' }}
+        mapContainerStyle={{
+          height: '100vh',
+          width: '100%',
+        }}
         zoom={15}
         center={{
           lat: 39.872331,
@@ -54,7 +64,10 @@ const Map: React.FC<MapProp> = ({
         options={options}
       >
         <MediaQuery maxWidth={900}>
-          <Switch onChange={handleChange} />
+          <FormControlLabel
+            control={<Switch defaultChecked onChange={handleChange} />}
+            label="List View"
+          />
         </MediaQuery>
         {places.map((place: Places, i: number) => (
           <Marker
