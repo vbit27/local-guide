@@ -54,14 +54,14 @@ const WhySection: React.FC = () => {
             <img src={World} alt="map" />
           </div>
         </div>
-        <div className={classes.actionContainer}>
-          <div className={classes.actionWrapper}>
-            <h2>Ready to get started?</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur </p>
-            <Link to={'/explore'}>
-              <Button buttonStyle={'btn--main'}>Explore</Button>
-            </Link>
-          </div>
+      </div>
+      <div className={classes.actionContainer}>
+        <div className={classes.actionWrapper}>
+          <h2>Ready to get started?</h2>
+          <p>Lorem ipsum dolor sit amet, consetetur </p>
+          <Link to={'/explore'}>
+            <Button buttonStyle={'btn--main'}>Explore</Button>
+          </Link>
         </div>
       </div>
     </div>
