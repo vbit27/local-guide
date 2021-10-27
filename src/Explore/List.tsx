@@ -1,7 +1,6 @@
 import {
+  Box,
   FormControl,
-  FormControlLabel,
-  FormGroup,
   Grid,
   InputLabel,
   MenuItem,
@@ -11,8 +10,16 @@ import {
 } from '@mui/material';
 import { createRef, useEffect, useState } from 'react';
 import PlaceCard from './PlaceCard';
+import classes from './List.module.css';
+import MediaQuery from 'react-responsive';
 
-const List: React.FC<ListProp> = ({ updatePlaces, places, selectedMarker }) => {
+const List: React.FC<ListProp> = ({
+  updatePlaces,
+  places,
+  selectedMarker,
+  showList,
+  handleChange,
+}) => {
   const [elRefs, setElRefs] = useState<React.RefObject<HTMLDivElement>[]>([]);
 
   //create an array of refs
@@ -26,8 +33,11 @@ const List: React.FC<ListProp> = ({ updatePlaces, places, selectedMarker }) => {
 
   return (
     <div>
-      <Typography variant={'h6'}>What are you looking for?</Typography>
-      <FormControl sx={{ m: 1, width: 300 }}>
+      <Box sx={{ typography: 'h5', m: 2 }}>What are you looking for?</Box>
+      <FormControl sx={{ m: 2, width: 300 }}>
+        <MediaQuery maxWidth={900}>
+          <Switch checked={showList} onChange={handleChange} />
+        </MediaQuery>
         <InputLabel>Type</InputLabel>
         <Select
           defaultValue={'restaurants'}
@@ -39,7 +49,13 @@ const List: React.FC<ListProp> = ({ updatePlaces, places, selectedMarker }) => {
           <MenuItem value={'bars'}>Bars</MenuItem>
         </Select>
       </FormControl>
-      <Grid container spacing={3} style={{ height: '80vh', overflow: 'auto' }}>
+      <Grid
+        container
+        marginTop={2}
+        spacing={7}
+        style={{ height: '80vh', overflow: 'auto' }}
+        className={classes.container}
+      >
         {places.map((place: Places, i) => (
           <Grid item xs={12} ref={elRefs[i]}>
             <PlaceCard
@@ -59,6 +75,8 @@ interface ListProp {
   updatePlaces: (choice: string) => void;
   places: Places[];
   selectedMarker: number | undefined;
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  showList: boolean;
 }
 
 export default List;
