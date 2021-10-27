@@ -4,7 +4,6 @@ import { CssBaseline, Grid, Switch } from '@mui/material';
 import List from './List';
 import { bars, restaurants } from '../data/places';
 import { Header } from '../shared/Header';
-import MediaQuery from 'react-responsive';
 
 const Explore: React.FC = () => {
   const [places, setPlaces] = useState<Places[]>(restaurants);
@@ -12,7 +11,7 @@ const Explore: React.FC = () => {
     undefined
   );
   const [showList, setShowList] = useState(true);
-  const [showToggleBtn, setShowToggleBtn] = useState(false);
+  const [showMap, setShowMap] = useState(true);
 
   // Update places variable with the data info
   const updatePlaces = (choice: string) => {
@@ -23,22 +22,27 @@ const Explore: React.FC = () => {
     }
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setShowList(event.target.checked);
+  // toggle between map and list view
+  const handleChange = () => {
+    setShowList(!showList);
+    setShowMap(!showMap);
     console.log({ showList });
   };
 
-  const showButton = () => {
+  const checkWindowWidth = () => {
     if (window.innerWidth < 900) {
-      setShowToggleBtn(true);
-    } else setShowToggleBtn(false);
+      setShowMap(false);
+    } else {
+      setShowList(true);
+      setShowMap(true);
+    }
   };
 
   useEffect(() => {
-    showButton();
+    checkWindowWidth();
   }, []);
 
-  window.addEventListener('resize', showButton);
+  window.addEventListener('resize', checkWindowWidth);
   return (
     <>
       <CssBaseline />
@@ -50,20 +54,19 @@ const Explore: React.FC = () => {
               updatePlaces={(choice: string) => updatePlaces(choice)}
               places={places}
               selectedMarker={selectedMarker}
-              showList={showList}
               handleChange={handleChange}
             />
           ) : null}
         </Grid>
-
-        {showList ? null : (
+        {showMap ? (
           <Grid item xs={12} md={7}>
             <Map
               places={places}
               setSelectedMarker={(index: number) => setSelectedMarker(index)}
+              handleChange={handleChange}
             />
           </Grid>
-        )}
+        ) : null}
       </Grid>
     </>
   );

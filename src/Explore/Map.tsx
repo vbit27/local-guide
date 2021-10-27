@@ -8,6 +8,7 @@ import {
 } from '@react-google-maps/api';
 import { Button, FormControlLabel, FormGroup, Switch } from '@mui/material';
 import { bars } from '../data/places';
+import MediaQuery from 'react-responsive';
 
 const style = {
   width: '100%',
@@ -25,7 +26,11 @@ const options = {
   disableDefaultUI: true,
 };
 
-const Map: React.FC<MapProp> = ({ places, setSelectedMarker }) => {
+const Map: React.FC<MapProp> = ({
+  places,
+  setSelectedMarker,
+  handleChange,
+}) => {
   const [selectedPlace, setSelectedPlace] = useState<Places | undefined>(
     undefined
   );
@@ -48,6 +53,9 @@ const Map: React.FC<MapProp> = ({ places, setSelectedMarker }) => {
         }}
         options={options}
       >
+        <MediaQuery maxWidth={900}>
+          <Switch onChange={handleChange} />
+        </MediaQuery>
         {places.map((place: Places, i: number) => (
           <Marker
             key={place.id}
@@ -101,6 +109,7 @@ const Map: React.FC<MapProp> = ({ places, setSelectedMarker }) => {
 interface MapProp {
   places: Places[];
   setSelectedMarker: (index: number) => void;
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default Map;

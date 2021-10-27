@@ -17,7 +17,6 @@ const List: React.FC<ListProp> = ({
   updatePlaces,
   places,
   selectedMarker,
-  showList,
   handleChange,
 }) => {
   const [elRefs, setElRefs] = useState<React.RefObject<HTMLDivElement>[]>([]);
@@ -36,7 +35,7 @@ const List: React.FC<ListProp> = ({
       <Box sx={{ typography: 'h5', m: 2 }}>What are you looking for?</Box>
       <FormControl sx={{ m: 2, width: 300 }}>
         <MediaQuery maxWidth={900}>
-          <Switch checked={showList} onChange={handleChange} />
+          <Switch onChange={handleChange} />
         </MediaQuery>
         <InputLabel>Type</InputLabel>
         <Select
@@ -75,8 +74,7 @@ interface ListProp {
   updatePlaces: (choice: string) => void;
   places: Places[];
   selectedMarker: number | undefined;
-  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  showList: boolean;
+  handleChange: () => void;
 }
 
 export default List;
