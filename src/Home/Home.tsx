@@ -1,16 +1,16 @@
 import classes from './Home.module.css';
-import { Box, Grid, Paper, Typography } from '@mui/material';
-import React from 'react';
+import React, { createRef, useRef } from 'react';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
-import Button from '../shared/Button';
 import WhySection from './WhySection';
 
 const Home: React.FC = () => {
+  const myRef = useRef<null | HTMLDivElement>(null);
+
   return (
     <>
-      <HeroSection />
-      <AboutSection />
+      <HeroSection myRef={myRef} />
+      <AboutSection myRef={myRef} />
       <WhySection />
     </>
   );

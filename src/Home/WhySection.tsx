@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import classes from './WhySection.module.css';
 import World from '../assets/images/world.jpeg';
 import Button from '../shared/Button';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 const WhySection: React.FC = () => {
   return (
@@ -57,7 +58,9 @@ const WhySection: React.FC = () => {
           <div className={classes.actionWrapper}>
             <h2>Ready to get started?</h2>
             <p>Lorem ipsum dolor sit amet, consetetur </p>
-            <Button buttonStyle={'btn--main'}>Explore</Button>
+            <Link to={'/explore'}>
+              <Button buttonStyle={'btn--main'}>Explore</Button>
+            </Link>
           </div>
         </div>
       </div>

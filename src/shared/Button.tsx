@@ -8,7 +8,10 @@ const Button: React.FC<ButtonProp> = ({ onClick, children, buttonStyle }) => {
   const checkStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
 
   return (
-    <button className={clsx(classes.btn, classes[checkStyle])}>
+    <button
+      className={clsx(classes.btn, classes[checkStyle])}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

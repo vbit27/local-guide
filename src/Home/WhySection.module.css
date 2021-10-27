@@ -96,3 +96,10 @@
     padding: 3rem 0rem;
   }
 }
+
+@media (min-width: 1900px) {
+  .container {
+    width: 70vw;
+    margin: 0 auto;
+  }
+}

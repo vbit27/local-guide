@@ -2,9 +2,12 @@ import React from 'react';
 import classes from './HeroSection.module.css';
 import MediaQuery from 'react-responsive';
 import Button from '../shared/Button';
+import { Link } from 'react-router-dom';
 //import Background from '../images/seafood.jpg';
 
-const HeroSection: React.FC = () => {
+const HeroSection: React.FC<HeroProps> = ({ myRef }) => {
+  const executeScroll = () =>
+    myRef.current!.scrollIntoView({ behavior: 'smooth', block: 'center' });
   return (
     <div className={classes.container}>
       <div className={classes.grid}>
@@ -20,8 +23,12 @@ const HeroSection: React.FC = () => {
               est reccomandations out there
             </p>
             <div className={classes.containerButtons}>
-              <Button buttonStyle={'btn--main'}>Explore</Button>
-              <Button buttonStyle={'btn--outline'}>Read More</Button>
+              <Link to={'/explore'}>
+                <Button buttonStyle={'btn--main'}>Explore</Button>
+              </Link>
+              <Button buttonStyle={'btn--outline'} onClick={executeScroll}>
+                Read More
+              </Button>
             </div>
           </div>
         </div>
@@ -36,4 +43,7 @@ const HeroSection: React.FC = () => {
   );
 };
 
+interface HeroProps {
+  myRef: React.MutableRefObject<HTMLDivElement | null>;
+}
 export default HeroSection;

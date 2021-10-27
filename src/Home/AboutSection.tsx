@@ -3,11 +3,12 @@ import React from 'react';
 import classes from './AboutSection.module.css';
 import YoutubeSearchedForIcon from '@mui/icons-material/YoutubeSearchedFor';
 import Button from '../shared/Button';
+import { Link } from 'react-router-dom';
 
-const AboutSection: React.FC = () => {
+const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
   return (
     <>
-      <div className={classes.container}>
+      <div className={classes.container} ref={myRef}>
         <div className={classes.grid}>
           <div className={clsx(classes.firstContainer)}>
             <h1>What is localguide</h1>
@@ -45,12 +46,18 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
           <div className={clsx(classes.thirdContainer)}>
-            <Button buttonStyle={'btn--main'}>Explore</Button>
+            <Link to={'/explore'}>
+              <Button buttonStyle={'btn--main'}>Explore</Button>
+            </Link>
           </div>
         </div>
       </div>
     </>
   );
 };
+
+interface AboutProps {
+  myRef: React.MutableRefObject<HTMLDivElement | null>;
+}
 
 export default AboutSection;
