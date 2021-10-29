@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Map from './Map';
 import { CssBaseline, Grid, Switch } from '@mui/material';
 import List from './List';
-import { bars, restaurants } from '../data/places';
+import { bars, restaurants, streetFood, usefulServices } from '../data/places';
 import { Header } from '../shared/Header';
 
 const Explore: React.FC = () => {
@@ -19,6 +19,10 @@ const Explore: React.FC = () => {
       setPlaces(restaurants);
     } else if (choice === 'bars') {
       setPlaces(bars);
+    } else if (choice === 'streetFood') {
+      setPlaces(streetFood);
+    } else if (choice === 'usefulServices') {
+      setPlaces(usefulServices);
     }
   };
 
@@ -40,6 +44,7 @@ const Explore: React.FC = () => {
 
   useEffect(() => {
     checkWindowWidth();
+    window.scrollTo(0, 0);
   }, []);
 
   window.addEventListener('resize', checkWindowWidth);

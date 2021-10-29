@@ -35,7 +35,7 @@ const List: React.FC<ListProp> = ({
     <div>
       <Box
         style={{ display: 'flex', justifyContent: 'space-between' }}
-        sx={{ typography: 'h5', m: 2 }}
+        sx={{ typography: 'h5', m: 2, paddingTop: '1rem' }}
       >
         What are you looking for?
         <MediaQuery maxWidth={900}>
@@ -46,7 +46,6 @@ const List: React.FC<ListProp> = ({
         </MediaQuery>
       </Box>
       <FormControl sx={{ m: 2, width: 300 }}>
-        <InputLabel>Type</InputLabel>
         <Select
           defaultValue={'restaurants'}
           onChange={(e) => {
@@ -55,8 +54,8 @@ const List: React.FC<ListProp> = ({
         >
           <MenuItem value={'restaurants'}>Restaurants</MenuItem>
           <MenuItem value={'bars'}>Bars</MenuItem>
-          <MenuItem value={'street-food'}>Street Food</MenuItem>
-          <MenuItem value={'useful-services'}>Useful Sevices</MenuItem>
+          <MenuItem value={'streetFood'}>Street Food</MenuItem>
+          <MenuItem value={'usefulServices'}>Useful Sevices</MenuItem>
         </Select>
       </FormControl>
       <Grid

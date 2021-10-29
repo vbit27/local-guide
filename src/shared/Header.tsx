@@ -16,6 +16,7 @@ export const Header: React.FC = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Guide
           </Typography>
+
           <Button component={Link} to={'/'} color="inherit">
             Home
           </Button>
