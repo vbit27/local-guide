@@ -55,6 +55,8 @@ const List: React.FC<ListProp> = ({
         >
           <MenuItem value={'restaurants'}>Restaurants</MenuItem>
           <MenuItem value={'bars'}>Bars</MenuItem>
+          <MenuItem value={'street-food'}>Street Food</MenuItem>
+          <MenuItem value={'useful-services'}>Useful Sevices</MenuItem>
         </Select>
       </FormControl>
       <Grid

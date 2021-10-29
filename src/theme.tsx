@@ -12,6 +12,7 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: 'Roboto',
+    h1: {},
     body2: {
       fontSize: '18px',
       lineHeight: '1.5',

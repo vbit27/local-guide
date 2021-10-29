@@ -47,7 +47,7 @@ const Explore: React.FC = () => {
     <>
       <CssBaseline />
       <Header />
-      <Grid container spacing={3} style={{ width: '100%' }}>
+      <Grid container spacing={3}>
         <Grid item xs={12} md={5}>
           {showList ? (
             <List

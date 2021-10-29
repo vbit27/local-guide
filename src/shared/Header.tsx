@@ -11,10 +11,10 @@ import { Label } from '@mui/icons-material';
 export const Header: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            Local Guide
+      <AppBar position="static" elevation={0}>
+        <Toolbar variant="dense">
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Guide
           </Typography>
           <Button component={Link} to={'/'} color="inherit">
             Home

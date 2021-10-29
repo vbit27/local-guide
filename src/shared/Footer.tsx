@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <Box
-      bgcolor={'text.secondary'}
+      bgcolor={'black'}
       style={{
         height: '5vh',
         display: 'flex',

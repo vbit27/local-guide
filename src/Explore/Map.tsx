@@ -81,7 +81,7 @@ const Map: React.FC<MapProp> = ({
               setSelectedMarker(i);
             }}
             icon={{
-              url: `../icons/${place.types[0]}.svg`,
+              url: `../icons/${place.types[0]}-marker.svg`,
               scaledSize: new window.google.maps.Size(35, 35),
             }}
           />
