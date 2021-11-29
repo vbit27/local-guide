@@ -14,7 +14,7 @@ import {
   Switch,
   Typography,
 } from '@mui/material';
-import { bars } from '../data/places';
+import { bars } from '../../data/places';
 import MediaQuery from 'react-responsive';
 
 const style = {

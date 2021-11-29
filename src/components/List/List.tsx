@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 import { createRef, useEffect, useState } from 'react';
-import PlaceCard from './PlaceCard';
+import PlaceCard from '../PlaceCard/PlaceCard';
 import classes from './List.module.css';
 import MediaQuery from 'react-responsive';
 

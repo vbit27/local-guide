@@ -23,9 +23,6 @@ export const Header: React.FC = () => {
           <Button component={Link} to={'/explore'} color="inherit">
             Explore
           </Button>
-          <Button component={Link} to={'/info'} color="inherit">
-            Info
-          </Button>
         </Toolbar>
       </AppBar>
     </Box>

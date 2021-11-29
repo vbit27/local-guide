@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import classes from './WhySection.module.css';
-import World from '../assets/images/world.jpeg';
-import Button from '../shared/Button';
+import World from '../../assets/images/world.jpeg';
+import Button from '../Button/Button';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 

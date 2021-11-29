@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Map from './Map';
+import Map from '../../components/Map/Map';
 import { CssBaseline, Grid, Switch } from '@mui/material';
-import List from './List';
-import { bars, restaurants, streetFood, usefulServices } from '../data/places';
-import { Header } from '../shared/Header';
+import List from '../../components/List/List';
+import {
+  bars,
+  restaurants,
+  streetFood,
+  usefulServices,
+} from '../../data/places';
+import { Header } from '../../components/Header/Header';
 
 const Explore: React.FC = () => {
   const [places, setPlaces] = useState<Places[]>(restaurants);
