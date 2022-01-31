@@ -23,8 +23,8 @@ const style = {
 };
 
 const center = {
-  lat: 39.8744907,
-  lng: 19.9987613,
+  lat: 39.872331,
+  lng: 20.002352,
 };
 
 const options = {
@@ -53,15 +53,9 @@ const Map: React.FC<MapProp> = ({
   return (
     <div>
       <GoogleMap
-        mapContainerStyle={{
-          height: '100vh',
-          width: '100%',
-        }}
+        mapContainerStyle={style}
         zoom={15}
-        center={{
-          lat: 39.872331,
-          lng: 20.002352,
-        }}
+        center={center}
         options={options}
       >
         <MediaQuery maxWidth={900}>
@@ -96,12 +90,14 @@ const Map: React.FC<MapProp> = ({
             }}
             onCloseClick={() => setSelectedPlace(undefined)}
           >
-            <div>
-              <h4 style={{ display: 'flex', justifyContent: 'space-around' }}>
-                {selectedPlace.name}
-              </h4>
-              {selectedPlace.types ? <p>{selectedPlace.types[0]}</p> : null}
-
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
+              <h4>{selectedPlace.name}</h4>
               {selectedPlace.price_level ? (
                 <p> Price: {selectedPlace.price_level}</p>
               ) : null}
