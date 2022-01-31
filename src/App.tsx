@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import { ThemeProvider } from '@mui/material';
 import { theme } from './theme';
+import { Header } from './components/Header/Header';
 
 function App() {
   return (

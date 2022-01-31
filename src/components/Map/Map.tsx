@@ -44,6 +44,7 @@ const Map: React.FC<MapProp> = ({
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY!,
+    libraries: ['places'],
   });
 
   if (loadError) return <div>'Error loading map'</div>;
