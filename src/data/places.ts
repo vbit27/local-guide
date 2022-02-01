@@ -90,8 +90,8 @@ export const streetFood = [
 export const usefulServices = [
   {
     address: 'Rruga Flamurit, Sarandë, Albania',
-    name: 'Bus Station',
-    types: ['usefulServices', 'Bus station'],
+    name: 'Bus Station (National and International)',
+    types: ['bus-station', 'usefulServices'],
     url: 'https://goo.gl/maps/MGGRbPkMLcHgVZhK7',
     id: 'ChIJ08FsgmQVWxMRD6eInU1Mfbus',
     description:
@@ -100,5 +100,63 @@ export const usefulServices = [
       lat: 39.8756506411089,
       lng: 20.006450330992145,
     },
+  },
+  {
+    address: 'Rruga Jonianet, Sarandë, Albania',
+    name: 'Fresh Vegetable Market',
+    types: ['bus-station', 'usefulServices'],
+    url: 'https://goo.gl/maps/nXfvGWD8HdQKwrw16',
+    id: 'ChIJwYYmaSMVWxMRUQ643gbDBb8',
+    description:
+      'The fresh fruit and vegetable market with vendors from all around the region. Go early in the morning to get the freshest things.',
+    location: { lat: 39.87321480394076, lng: 20.003192743981245 },
+  },
+  {
+    address: 'Rruga Mitat Hoxha 5, Sarandë, Albanien',
+    name: 'Bus Stop to Ksamil & Butrint',
+    types: ['bus-station', 'usefulServices'],
+    url: 'https://goo.gl/maps/VgWjsUW3BPXrDxPU8',
+    id: 'ChIJB5Z9n-YVWxMRteAb9Gm3JXw',
+    description:
+      'Station of departure of the bus that drives to Butrint through Ksamil. Check at the bus station for an updated timetable',
+    location: { lat: 39.87320756408015, lng: 20.00240206718445 },
+  },
+  {
+    address: 'Lagjia Nr 4, Rruga Mitat Hoxha, Sarandë 9701, Albanien',
+    name: 'Port of Saranda',
+    types: ['bus-station', 'usefulServices'],
+    url: 'https://goo.gl/maps/orEyC4TAMJSUzFM28',
+    id: 'ChIJg_UtnfwUWxMRxaOvgivR7q8',
+    description:
+      'The main port of Saranda. Here is where boats to Corfu and Italy depart from. Next to the port are all the travel agencies that sell tickets',
+    location: { lat: 39.87142487853256, lng: 20.00312626361847 },
+  },
+  {
+    address: 'Rruga Flamurit, Sarandë, Albanien',
+    name: 'Money Exchange',
+    types: ['bus-station', 'usefulServices'],
+    url: 'https://goo.gl/maps/wTGgQ45NaaSvrfe58',
+    id: 'ChIJv_1f0BcVWxMRhZ5wVvAJNI8',
+    description:
+      'A very small money exchange office. Exchange rate in Albania is better in exchange offices than doing it through the banks',
+    location: { lat: 39.87405154454185, lng: 20.009772777557373 },
+  },
+  {
+    address: 'Rruga Flamurit, Sarandë, Albanien',
+    name: 'Post Office',
+    types: ['bus-station', 'usefulServices'],
+    url: 'https://goo.gl/maps/tqrL1hiD4E8rwX9e7',
+    id: 'ChIJ3YLV0PkUWxMRdUFGDyAroro',
+    description: 'The official post office in Saranda',
+    location: { lat: 39.87433767214605, lng: 20.008522868156433 },
+  },
+  {
+    address: 'Rruga Onheizmi, Sarandë 9701, Albanien',
+    name: 'Hospital',
+    types: ['bus-station', 'usefulServices'],
+    url: 'https://goo.gl/maps/k1gWksWCs2Qm4dPx8',
+    id: 'ChIJM9fCpkgVWxMRrVBamIZ1cUU',
+    description: 'The only hospital in town',
+    location: { lat: 39.8743808999537, lng: 20.000776648521423 },
   },
 ];
