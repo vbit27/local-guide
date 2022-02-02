@@ -20,6 +20,7 @@ const List: React.FC<ListProp> = ({
   places,
   selectedMarker,
   handleChange,
+  currentCategory,
 }) => {
   const [elRefs, setElRefs] = useState<React.RefObject<HTMLDivElement>[]>([]);
 
@@ -48,7 +49,7 @@ const List: React.FC<ListProp> = ({
       </Box>
       <FormControl sx={{ m: 2, width: 300 }}>
         <Select
-          defaultValue={'restaurants'}
+          value={currentCategory} // keep the same category inside the search bar after switching between map and list view
           onChange={(e) => {
             updatePlaces(e.target.value);
           }}
@@ -86,6 +87,7 @@ interface ListProp {
   places: Places[];
   selectedMarker: number | undefined;
   handleChange: () => void;
+  currentCategory: string;
 }
 
 export default List;

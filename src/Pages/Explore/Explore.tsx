@@ -12,6 +12,7 @@ import { Header } from '../../components/Header/Header';
 
 const Explore: React.FC = () => {
   const [places, setPlaces] = useState<Places[]>(restaurants);
+  const [currentCategory, setCurrentCategory] = useState('restaurants');
   const [selectedMarker, setSelectedMarker] = useState<number | undefined>(
     undefined
   );
@@ -20,6 +21,8 @@ const Explore: React.FC = () => {
 
   // Update places variable with the data info
   const updatePlaces = (choice: string) => {
+    setCurrentCategory(choice);
+
     if (choice === 'restaurants') {
       setPlaces(restaurants);
     } else if (choice === 'bars') {
@@ -35,7 +38,6 @@ const Explore: React.FC = () => {
   const handleChange = () => {
     setShowList(!showList);
     setShowMap(!showMap);
-    console.log({ showList });
   };
 
   const checkWindowWidth = () => {
@@ -65,6 +67,7 @@ const Explore: React.FC = () => {
               places={places}
               selectedMarker={selectedMarker}
               handleChange={handleChange}
+              currentCategory={currentCategory}
             />
           ) : null}
         </Grid>

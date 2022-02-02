@@ -13,10 +13,14 @@ export const Header: React.FC = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" elevation={0}>
         <Toolbar variant="dense">
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            component={Link}
+            to={'/'}
+            sx={{ flexGrow: 1 }}
+            color="inherit"
+          >
             Guide
           </Typography>
-
           <Button component={Link} to={'/'} color="inherit">
             Home
           </Button>
