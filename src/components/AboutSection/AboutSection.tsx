@@ -5,6 +5,9 @@ import YoutubeSearchedForIcon from '@mui/icons-material/YoutubeSearchedFor';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 import World from '../../assets/images/world.jpeg';
+import NonProfit from '../../assets/images/non-profit.jpg';
+import Budget from '../../assets/images/budget-friendly.jpg';
+import Curated from '../../assets/images/curated-list.jpg';
 
 const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
   return (
@@ -42,7 +45,7 @@ const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
                 </p>
               </div>
               <div className={classes.imageContainer}>
-                <img src={World} alt="map" />
+                <img src={NonProfit} alt="map" />
               </div>
             </div>
             <div className={classes.itemContainer}>
@@ -54,7 +57,7 @@ const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
                 </p>
               </div>
               <div className={clsx(classes.imageContainer, classes.first)}>
-                <img src={World} alt="map" />
+                <img src={Budget} alt="map" />
               </div>
             </div>{' '}
             <div className={classes.itemContainer}>
@@ -67,7 +70,7 @@ const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
                 </p>
               </div>
               <div className={classes.imageContainer}>
-                <img src={World} alt="map" />
+                <img src={Curated} alt="map" />
               </div>
             </div>
           </div>
