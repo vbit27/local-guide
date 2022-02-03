@@ -11,7 +11,6 @@ const Home: React.FC = () => {
     <>
       <HeroSection myRef={myRef} />
       <AboutSection myRef={myRef} />
-      <WhySection />
     </>
   );
 };
