@@ -17,10 +17,9 @@ const HeroSection: React.FC<HeroProps> = ({ myRef }) => {
               Experience Saranda as a <strong>local</strong>{' '}
             </h1>
             <p className={classes.subtitle}>
-              Experience Saranda as a local. Avoid tourist-traps and find the
-              best reccomandations out there Experience Saranda as a local.
-              Avoid tourist-traps and find the best reccomandations out there
-              est reccomandations out there
+              Avoid tourist-traps and experience Saranda as a local. Discover
+              new places by following the advice of real locals that know their
+              city inside out!
             </p>
             <div className={classes.containerButtons}>
               <Link to={'/explore'}>
