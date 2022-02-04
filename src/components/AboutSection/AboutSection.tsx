@@ -12,12 +12,12 @@ import Curated from '../../assets/images/curated-list.jpg';
 const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
   return (
     <>
-      <div className={classes.container} ref={myRef}>
+      <div className={classes.container}>
         <div className={classes.firstGrid}>
           <div className={clsx(classes.firstItem)}>
             <h1>What is localguide</h1>
           </div>
-          <div className={clsx(classes.firstItem)}>
+          <div className={clsx(classes.firstItem)} ref={myRef}>
             <p>
               Local Guide is a collection of favorite and cosy places locals in
               Saranda like to spend their time to. The recommendations are
@@ -45,7 +45,7 @@ const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
                 </p>
               </div>
               <div className={classes.imageContainer}>
-                <img src={NonProfit} alt="map" />
+                <img src={Curated} alt="people drinking" />
               </div>
             </div>
             <div className={classes.itemContainer}>
@@ -57,7 +57,7 @@ const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
                 </p>
               </div>
               <div className={clsx(classes.imageContainer, classes.first)}>
-                <img src={Budget} alt="map" />
+                <img src={Budget} alt="sea food" />
               </div>
             </div>{' '}
             <div className={classes.itemContainer}>
@@ -70,7 +70,7 @@ const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
                 </p>
               </div>
               <div className={classes.imageContainer}>
-                <img src={Curated} alt="map" />
+                <img src={NonProfit} alt="girlfriends drinking" />
               </div>
             </div>
           </div>

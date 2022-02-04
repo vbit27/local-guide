@@ -8,6 +8,8 @@ export const restaurants = [
     rating: 4.4,
     price_level: '$',
     types: ['restaurant', 'Mediterranean'],
+    image: '../images/taverna-erjoni.jpg',
+    alt: 'fried fish',
     url: 'https://maps.google.com/?cid=8223485386262412288',
     id: 'ChIJnyzbtioVWxMRAHzJj2OwH3I',
     description:
@@ -18,27 +20,12 @@ export const restaurants = [
     },
   },
   {
-    address: 'Rruga Jonianet 38, Sarandë, Albania',
-    phone_number: '+355 69 279 1713',
-    name: 'Taverna Garden',
-    price_level: '$',
-    rating: 4.6,
-    types: ['restaurant', 'Mediterranean'],
-    url: 'https://maps.google.com/?cid=404154598749224308',
-    id: 'ChIJAYN0ZPkUWxMRdL3JXHfYmwU',
-    description:
-      'A restaurant at the promenade where you can eat good fish with good prices',
-    location: {
-      lat: 39.8734518,
-      lng: 20.0059262,
-    },
-  },
-
-  {
     address: 'Rruga Mitat Hoxha 49, Sarandë, Albania',
-    name: 'Onhezmi Lounge Bar',
+    name: 'Onhezmi Restaurant',
     rating: 4.5,
     types: ['restaurant', 'Traditional'],
+    image: '../images/restaurant-onhezmi.jpg',
+    alt: 'filled paprika with rice',
     price_level: '$',
     url: 'https://maps.google.com/?cid=6942685553138264899',
     location: {
@@ -48,6 +35,24 @@ export const restaurants = [
     description:
       'A hidden restaurant with amazing hoe made dishes and a lovely view',
     id: 'ChIJVajFkPwUWxMRQ-sKBrpfWWA',
+  },
+  {
+    address: 'Rruga Jonianet 38, Sarandë, Albania',
+    phone_number: '+355 69 279 1713',
+    name: 'Taverna Garden',
+    price_level: '$',
+    rating: 4.6,
+    types: ['restaurant', 'Mediterranean'],
+    image: '../images/taverna-garden.jpg',
+    alt: 'greek salad',
+    url: 'https://maps.google.com/?cid=404154598749224308',
+    id: 'ChIJAYN0ZPkUWxMRdL3JXHfYmwU',
+    description:
+      'A restaurant at the promenade where you can eat good fish with good prices',
+    location: {
+      lat: 39.8734518,
+      lng: 20.0059262,
+    },
   },
 ];
 
@@ -59,6 +64,8 @@ export const bars = [
     rating: 4.5,
     price_level: '$$',
     types: ['bar', 'Cocktails'],
+    image: '../images/jericho-bar.jpg',
+    alt: 'cocktail with orange',
     url: 'https://maps.google.com/?cid=13624261783785041750',
     location: {
       lat: 39.8736492,
@@ -77,6 +84,8 @@ export const streetFood = [
     rating: 4.8,
     price_level: '$',
     types: ['streetFood', 'Street-food'],
+    image: '../images/fast-food-cuci.jpg',
+    alt: 'grilled chicken',
     url: 'https://maps.google.com/?cid=14878851165164447503',
     id: 'ChIJ08FsgmQVWxMRD6eInU1MfM4',
     description: 'A great place for grilled chicken or a souvlaki',
@@ -92,6 +101,8 @@ export const usefulServices = [
     address: 'Rruga Flamurit, Sarandë, Albania',
     name: 'Bus Station (National and International)',
     types: ['bus-station', 'usefulServices'],
+    image: '../images/bus-station.jpg',
+    alt: 'bus station',
     url: 'https://goo.gl/maps/MGGRbPkMLcHgVZhK7',
     id: 'ChIJ08FsgmQVWxMRD6eInU1Mfbus',
     description:
@@ -105,6 +116,8 @@ export const usefulServices = [
     address: 'Rruga Jonianet, Sarandë, Albania',
     name: 'Fresh Vegetable Market',
     types: ['bus-station', 'usefulServices'],
+    image: '../images/vegetable-market.jpg',
+    alt: 'vegetable market',
     url: 'https://goo.gl/maps/nXfvGWD8HdQKwrw16',
     id: 'ChIJwYYmaSMVWxMRUQ643gbDBb8',
     description:
@@ -115,6 +128,8 @@ export const usefulServices = [
     address: 'Rruga Mitat Hoxha 5, Sarandë, Albanien',
     name: 'Bus Stop to Ksamil & Butrint',
     types: ['bus-station', 'usefulServices'],
+    image: '../images/ksamil-bus-station.jpg',
+    alt: 'bus from the inside',
     url: 'https://goo.gl/maps/VgWjsUW3BPXrDxPU8',
     id: 'ChIJB5Z9n-YVWxMRteAb9Gm3JXw',
     description:
@@ -125,6 +140,8 @@ export const usefulServices = [
     address: 'Lagjia Nr 4, Rruga Mitat Hoxha, Sarandë 9701, Albanien',
     name: 'Port of Saranda',
     types: ['bus-station', 'usefulServices'],
+    image: '../images/port.jpg',
+    alt: 'port with boats',
     url: 'https://goo.gl/maps/orEyC4TAMJSUzFM28',
     id: 'ChIJg_UtnfwUWxMRxaOvgivR7q8',
     description:
@@ -135,6 +152,8 @@ export const usefulServices = [
     address: 'Rruga Flamurit, Sarandë, Albanien',
     name: 'Money Exchange',
     types: ['bus-station', 'usefulServices'],
+    image: '../images/money-exchange.jpg',
+    alt: 'hands holding dollars',
     url: 'https://goo.gl/maps/wTGgQ45NaaSvrfe58',
     id: 'ChIJv_1f0BcVWxMRhZ5wVvAJNI8',
     description:
@@ -145,6 +164,8 @@ export const usefulServices = [
     address: 'Rruga Flamurit, Sarandë, Albanien',
     name: 'Post Office',
     types: ['bus-station', 'usefulServices'],
+    image: '../images/post-office.jpg',
+    alt: 'letters and envelopes',
     url: 'https://goo.gl/maps/tqrL1hiD4E8rwX9e7',
     id: 'ChIJ3YLV0PkUWxMRdUFGDyAroro',
     description: 'The official post office in Saranda',
@@ -154,6 +175,8 @@ export const usefulServices = [
     address: 'Rruga Onheizmi, Sarandë 9701, Albanien',
     name: 'Hospital',
     types: ['bus-station', 'usefulServices'],
+    image: '../images/hospital.jpg',
+    alt: 'nurse',
     url: 'https://goo.gl/maps/k1gWksWCs2Qm4dPx8',
     id: 'ChIJM9fCpkgVWxMRrVBamIZ1cUU',
     description: 'The only hospital in town',

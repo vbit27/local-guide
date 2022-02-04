@@ -12,4 +12,6 @@ interface Places {
     lat: number;
     lng: number;
   };
+  image?: string;
+  alt?: string;
 }

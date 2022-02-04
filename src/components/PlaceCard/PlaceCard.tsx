@@ -25,8 +25,8 @@ const PlaceCard: React.FC<PlaceCardProp> = ({ place, selected, refProp }) => {
           <CardMedia
             component="img"
             height="350px"
-            image="../images/seafood.jpg"
-            alt="green iguana"
+            image={place.image}
+            alt={place.alt}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
