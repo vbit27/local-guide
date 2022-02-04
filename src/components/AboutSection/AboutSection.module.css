@@ -55,8 +55,8 @@
   padding: 3rem 3rem;
 }
 
-.imageContainer {
-  display: grid;
+.imageContainer img {
+  border-radius: 4px;
 }
 
 .first {

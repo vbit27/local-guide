@@ -7,20 +7,17 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { FormControlLabel, FormGroup, Switch } from '@mui/material';
 import { Label } from '@mui/icons-material';
+import Logo from '../../assets/images/fish.svg';
 
 export const Header: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" elevation={0}>
         <Toolbar variant="dense">
-          <Typography
-            component={Link}
-            to={'/'}
-            sx={{ flexGrow: 1 }}
-            color="inherit"
-          >
-            Guide
-          </Typography>
+          <Link to={'/'} style={{ flexGrow: 1 }}>
+            <img src={Logo} alt="fish logo" style={{ width: '70px' }} />
+          </Link>
+
           <Button component={Link} to={'/'} color="inherit">
             Home
           </Button>
