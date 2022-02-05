@@ -17,7 +17,11 @@ const Footer = () => {
         made with love
       </Typography>
       <div>
-        <img src={HeartIcon} style={{ width: '15px', margin: '5px' }}></img>
+        <img
+          src={HeartIcon}
+          alt="heart icon"
+          style={{ width: '15px', margin: '5px' }}
+        ></img>
       </div>
       <Typography color={'white'} gutterBottom variant={'body2'}>
         from vasil bituni

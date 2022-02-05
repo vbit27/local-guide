@@ -78,6 +78,40 @@ export const bars = [
 
 export const streetFood = [
   {
+    address: 'Rruga Skënderbeu, Sarandë, Albanien',
+    name: 'Byrektore Xhavara',
+    rating: 5,
+    price_level: '$',
+    types: ['streetFood', 'Street-food'],
+    image: '../images/byrektore-xhavara.jpg',
+    alt: 'pastry',
+    url: 'https://goo.gl/maps/rrfMQQ745xkeGDrZA',
+    id: 'ChIJqw8cf_cUWxMRX0cjXKNopck',
+    description:
+      'This is place that every local knows. The most delicious byrek in town, perfect for a long day in the beach. Unbeatable prices',
+    location: {
+      lat: 39.875023,
+      lng: 20.009301,
+    },
+  },
+  {
+    address: 'AL, Rruga Adem Sheme, 9701, Albanien',
+    name: 'Pizza Savos',
+    rating: 4.5,
+    price_level: '$',
+    types: ['streetFood', 'Street-food'],
+    image: '../images/pizza-savos.jpg',
+    alt: 'wraps om a table',
+    url: 'https://g.page/pizzasavos?share',
+    id: 'ChIJgY8zQigVWxMRpGP4VBvlJe8',
+    description:
+      'Ever tried a skepasti? If not, then you are missing out. This pizza place is up on the hill, but offers the best skepasti. If not in the mood to walk all the way up there, you can also call and make a delivery. And be careful, the portion is huge. ',
+    location: {
+      lat: 39.877848,
+      lng: 20.003734,
+    },
+  },
+  {
     address: 'Rruga Adem Sheme 11, Sarandë, Albania',
     phone_number: '+355 69 968 7919',
     name: 'Fast Food Cuci',

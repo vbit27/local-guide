@@ -4,6 +4,7 @@ Avoid the crowds and tourist traps
 
 ## To do
 
+- Create a 404 page
 - Create a preview image
   https://www.youtube.com/watch?v=PjpPJfolInU&ab_channel=%C3%87elikK%C3%B6seo%C4%9Flu
 - Create Flavicon icon
@@ -30,6 +31,10 @@ Photo by <a href="https://unsplash.com/@arobj?utm_source=unsplash&utm_medium=ref
 - Street Food
 
 Photo by <a href="https://unsplash.com/@dan_fromyesmorecontent?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel Hooper</a> on <a href="https://unsplash.com/s/photos/grilled-chicken?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@minkmingle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mink Mingle</a> on <a href="https://unsplash.com/s/photos/pastry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@bite_size01?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ryan Concepcion</a> on <a href="https://unsplash.com/s/photos/pita?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 - Useful Services
 
