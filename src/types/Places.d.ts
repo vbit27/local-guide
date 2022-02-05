@@ -14,4 +14,5 @@ interface Places {
   };
   image?: string;
   alt?: string;
+  marker_icon?: string;
 }

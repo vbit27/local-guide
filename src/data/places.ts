@@ -10,6 +10,7 @@ export const restaurants = [
     types: ['restaurant', 'Mediterranean'],
     image: '../images/taverna-erjoni.jpg',
     alt: 'fried fish',
+    marker_icon: 'restaurant',
     url: 'https://maps.google.com/?cid=8223485386262412288',
     id: 'ChIJnyzbtioVWxMRAHzJj2OwH3I',
     description:
@@ -26,6 +27,7 @@ export const restaurants = [
     types: ['restaurant', 'Traditional'],
     image: '../images/restaurant-onhezmi.jpg',
     alt: 'filled paprika with rice',
+    marker_icon: 'restaurant',
     price_level: '$',
     url: 'https://maps.google.com/?cid=6942685553138264899',
     location: {
@@ -45,6 +47,7 @@ export const restaurants = [
     types: ['restaurant', 'Mediterranean'],
     image: '../images/taverna-garden.jpg',
     alt: 'greek salad',
+    marker_icon: 'restaurant',
     url: 'https://maps.google.com/?cid=404154598749224308',
     id: 'ChIJAYN0ZPkUWxMRdL3JXHfYmwU',
     description:
@@ -66,6 +69,7 @@ export const bars = [
     types: ['bar', 'Cocktails'],
     image: '../images/jericho-bar.jpg',
     alt: 'cocktail with orange',
+    marker_icon: 'bar',
     url: 'https://maps.google.com/?cid=13624261783785041750',
     location: {
       lat: 39.8736492,
@@ -85,6 +89,7 @@ export const streetFood = [
     types: ['streetFood', 'Street-food'],
     image: '../images/byrektore-xhavara.jpg',
     alt: 'pastry',
+    marker_icon: 'street-food',
     url: 'https://goo.gl/maps/rrfMQQ745xkeGDrZA',
     id: 'ChIJqw8cf_cUWxMRX0cjXKNopck',
     description:
@@ -102,6 +107,7 @@ export const streetFood = [
     types: ['streetFood', 'Street-food'],
     image: '../images/pizza-savos.jpg',
     alt: 'wraps om a table',
+    marker_icon: 'street-food',
     url: 'https://g.page/pizzasavos?share',
     id: 'ChIJgY8zQigVWxMRpGP4VBvlJe8',
     description:
@@ -120,6 +126,7 @@ export const streetFood = [
     types: ['streetFood', 'Street-food'],
     image: '../images/fast-food-cuci.jpg',
     alt: 'grilled chicken',
+    marker_icon: 'street-food',
     url: 'https://maps.google.com/?cid=14878851165164447503',
     id: 'ChIJ08FsgmQVWxMRD6eInU1MfM4',
     description: 'A great place for grilled chicken or a souvlaki',
@@ -137,6 +144,7 @@ export const usefulServices = [
     types: ['bus-station', 'usefulServices'],
     image: '../images/bus-station.jpg',
     alt: 'bus station',
+    marker_icon: 'bus-station',
     url: 'https://goo.gl/maps/MGGRbPkMLcHgVZhK7',
     id: 'ChIJ08FsgmQVWxMRD6eInU1Mfbus',
     description:
@@ -152,6 +160,7 @@ export const usefulServices = [
     types: ['bus-station', 'usefulServices'],
     image: '../images/vegetable-market.jpg',
     alt: 'vegetable market',
+    marker_icon: 'vegetable-market',
     url: 'https://goo.gl/maps/nXfvGWD8HdQKwrw16',
     id: 'ChIJwYYmaSMVWxMRUQ643gbDBb8',
     description:
@@ -164,6 +173,7 @@ export const usefulServices = [
     types: ['bus-station', 'usefulServices'],
     image: '../images/ksamil-bus-station.jpg',
     alt: 'bus from the inside',
+    marker_icon: 'bus-station',
     url: 'https://goo.gl/maps/VgWjsUW3BPXrDxPU8',
     id: 'ChIJB5Z9n-YVWxMRteAb9Gm3JXw',
     description:
@@ -176,6 +186,7 @@ export const usefulServices = [
     types: ['bus-station', 'usefulServices'],
     image: '../images/port.jpg',
     alt: 'port with boats',
+    marker_icon: 'port',
     url: 'https://goo.gl/maps/orEyC4TAMJSUzFM28',
     id: 'ChIJg_UtnfwUWxMRxaOvgivR7q8',
     description:
@@ -188,6 +199,7 @@ export const usefulServices = [
     types: ['bus-station', 'usefulServices'],
     image: '../images/money-exchange.jpg',
     alt: 'hands holding dollars',
+    marker_icon: 'exchange-office',
     url: 'https://goo.gl/maps/wTGgQ45NaaSvrfe58',
     id: 'ChIJv_1f0BcVWxMRhZ5wVvAJNI8',
     description:
@@ -200,6 +212,7 @@ export const usefulServices = [
     types: ['bus-station', 'usefulServices'],
     image: '../images/post-office.jpg',
     alt: 'letters and envelopes',
+    marker_icon: 'post-office',
     url: 'https://goo.gl/maps/tqrL1hiD4E8rwX9e7',
     id: 'ChIJ3YLV0PkUWxMRdUFGDyAroro',
     description: 'The official post office in Saranda',
@@ -211,6 +224,7 @@ export const usefulServices = [
     types: ['bus-station', 'usefulServices'],
     image: '../images/hospital.jpg',
     alt: 'nurse',
+    marker_icon: 'hospital',
     url: 'https://goo.gl/maps/k1gWksWCs2Qm4dPx8',
     id: 'ChIJM9fCpkgVWxMRrVBamIZ1cUU',
     description: 'The only hospital in town',
