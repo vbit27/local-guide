@@ -1,10 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import classes from './AboutSection.module.css';
-import YoutubeSearchedForIcon from '@mui/icons-material/YoutubeSearchedFor';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
-import World from '../../assets/images/world.jpeg';
 import NonProfit from '../../assets/images/non-profit.jpg';
 import Budget from '../../assets/images/budget-friendly.jpg';
 import Curated from '../../assets/images/curated-list.jpg';

@@ -1,5 +1,6 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Link, SvgIcon, Typography } from '@mui/material';
 import React from 'react';
+import HeartIcon from '../../assets/images/heart.svg';
 
 const Footer = () => {
   return (
@@ -13,7 +14,13 @@ const Footer = () => {
       }}
     >
       <Typography color={'white'} gutterBottom variant={'body2'}>
-        made with love @ vasil bituni
+        made with love
+      </Typography>
+      <div>
+        <img src={HeartIcon} style={{ width: '15px', margin: '5px' }}></img>
+      </div>
+      <Typography color={'white'} gutterBottom variant={'body2'}>
+        from vasil bituni
       </Typography>
     </Box>
   );
