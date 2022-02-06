@@ -19,8 +19,7 @@
     <a href="https://local-guide.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/vbit27/local-guide/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/vbit27/recipe-app/issues">Request Feature</a>
+    
   </p>
 </div>
 
@@ -59,12 +58,12 @@ This App takes advantage of The Edamam API to show various recipes based on the 
 
 ### Built With
 
-- [Edamam API](https://www.edamam.com/)
+- [React Google Maps API](https://www.npmjs.com/package/@react-google-maps/api)
+- [Material UI](https://mui.com/)
 - [React.js](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Axios](https://axios-http.com/docs/intro)
-- Local Storage
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -76,13 +75,15 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Get a free API key at [Edamam API](https://www.edamam.com/)
+- Get an API key at [Google Map API](https://developers.google.com/maps)
+  Google API is not for free but it has free monthly quote
+- Activate **Maps JavaScript API** and **Places API** inside the dashboard
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/vbit27/recipe-app.git
+   git clone https://github.com/vbit27/local-guide.git
    ```
 2. Install NPM packages
    ```sh
@@ -91,8 +92,7 @@ To get a local copy up and running follow these simple example steps.
 3. Create an `.env` file inside the root folder
 4. Enter your API in `.env`
    ```js
-   const REACT_APP_API_KEY = 'ENTER YOUR API KEY';
-   const REACT_APP_API_ID = 'ENTER YOUR API ID';
+   const REACT_APP_GOOGLE_KEY = 'ENTER YOUR API KEY';
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -115,8 +115,11 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## Future Work
 
-- Clear local storage when clicking logo
-- Load more results
+- Create a 404 page
+- Create a preview image
+  https://www.youtube.com/watch?v=PjpPJfolInU&ab_channel=%C3%87elikK%C3%B6seo%C4%9Flu
+- Close popup window when changing chategory
+- Create font universal font sizes
 
 <!-- LICENSE -->
 
@@ -132,7 +135,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Vasil Bituni - [Linkedin](www.linkedin.com/in/vasilis-bitounis) - vasil.bituni@gmail.com
 
-Project Link: [https://github.com/vbit27/recipe-app](https://github.com/vbit27/recipe-app)
+Project Link: [https://github.com/vbit27/local-guide](https://github.com/vbit27/local-guide)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -140,38 +143,7 @@ Project Link: [https://github.com/vbit27/recipe-app](https://github.com/vbit27/r
 
 ## Acknowledgments
 
-- [clsx](https://www.npmjs.com/package/clsx)
-- [Background icons](https://www.figma.com/@furquan101)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/vbit27/recipe-app/blob/main/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/vasilis-bitounis
-
----
-
-# Experience Saranda as local
-
-Avoid the crowds and tourist traps
-
-## To do
-
-- Create a 404 page
-- Create a preview image
-  https://www.youtube.com/watch?v=PjpPJfolInU&ab_channel=%C3%87elikK%C3%B6seo%C4%9Flu
-- Close popup window when changing chategory
-- Create font universal font sizes
-
-## Issues
-
-## Acknowledgement
-
-- Restaurants
+Images and icons copyrights
 
 Photo by <a href="https://unsplash.com/@chaya2498?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chaya Ruangsiri</a> on <a href="https://unsplash.com/s/photos/calamari?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
@@ -202,3 +174,13 @@ Photo by <a href="https://unsplash.com/@rozetsky?utm_source=unsplash&utm_medium=
 Photo by <a href="https://unsplash.com/@timlontano?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim L. Productions</a> on <a href="https://unsplash.com/s/photos/port-boats?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 Photo by <a href="https://unsplash.com/@alexandermils?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander Mils</a> on <a href="https://unsplash.com/s/photos/money-exchange-office?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/vbit27/recipe-app/blob/main/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/vasilis-bitounis
