@@ -20,4 +20,5 @@
 .btn--outline {
   background-color: white;
   border: none;
+  text-decoration: none;
 }
