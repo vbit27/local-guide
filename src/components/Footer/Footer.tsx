@@ -13,7 +13,7 @@ const Footer = () => {
         alignItems: 'center',
       }}
     >
-      <Typography color={'white'} gutterBottom variant={'body2'}>
+      <Typography color="#fff" gutterBottom variant={'body2'}>
         made with love
       </Typography>
       <div>
@@ -23,9 +23,15 @@ const Footer = () => {
           style={{ width: '15px', margin: '5px' }}
         ></img>
       </div>
-      <Typography color={'white'} gutterBottom variant={'body2'}>
-        from vasil bituni
-      </Typography>
+      <Link
+        color="#fff"
+        href="https://github.com/vbit27"
+        gutterBottom
+        variant={'body2'}
+        target="_blank"
+      >
+        vasil bituni
+      </Link>
     </Box>
   );
 };
