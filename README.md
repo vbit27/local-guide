@@ -8,7 +8,6 @@ Avoid the crowds and tourist traps
 - Create a preview image
   https://www.youtube.com/watch?v=PjpPJfolInU&ab_channel=%C3%87elikK%C3%B6seo%C4%9Flu
 - Create Flavicon icon
-- Create Icons for useful services
 - Close popup window when changing chategory
 - Create font universal font sizes
 
