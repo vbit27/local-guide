@@ -52,7 +52,7 @@
 
 ## About The Project
 
-![Recipe App Screen Shot](https://user-images.githubusercontent.com/75995237/151698679-ab5d18a2-5ba9-4cd0-b538-4b34d3d71516.gif)
+![Recipe App Screen Shot](https://user-images.githubusercontent.com/75995237/152765089-0c4bbd2f-7e9d-49e9-9a40-3e446155c3af.gif)
 
 This app displays a list of restaurants, bars and various services in the city of Saranda, Albania. The recommendations are selected based on a price-quality criteria.
 <br/><br/>
