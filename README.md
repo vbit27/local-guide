@@ -54,7 +54,13 @@
 
 ![Recipe App Screen Shot](https://user-images.githubusercontent.com/75995237/151698679-ab5d18a2-5ba9-4cd0-b538-4b34d3d71516.gif)
 
-This App takes advantage of The Edamam API to show various recipes based on the main ingredient of your choice. To refine your search even more you can filter based on your diet and/or the type of meal.
+This app displays a list of restaurants, bars and various services in the city of Saranda, Albania. The recommendations are selected based on a price-quality criteria.
+<br/><br/>
+
+By using Google Maps API, users can see the exact coordinates of the place, as well as some additional information such as: short description, price range, phone number, etc.
+<br/><br/>
+
+The Explore page was created using Material UI. Material UI offers a light, user-friendly and simple design that allowed to create a responsive page that easily adapts to any possible screen size.
 
 ### Built With
 

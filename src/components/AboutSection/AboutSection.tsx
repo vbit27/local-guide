@@ -18,15 +18,10 @@ const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
           <div className={clsx(classes.firstItem)} ref={myRef}>
             <p>
               A curated list of the most budget-friendly places in Saranda,
-              Albania. This is a non-profit project created from volunteers.{' '}
-              <br /> <br /> Our mission is to help visitors avoid tourist-traps
-              and to reward small business owners, who don't inflect their
-              prices during high-season.
-              <br />
-              <br />
-              We constantly update our list and we are always in search of new
-              locally owned business which don't break the bank, but also offer
-              amazing service.
+              Albania. This is a non-profit project created from volunteers. Our
+              mission is to help visitors avoid tourist-traps and to reward
+              small business owners, who don't inflect their prices during
+              high-season.
             </p>
           </div>
         </div>
@@ -38,7 +33,7 @@ const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
                 <p>
                   All the recommendations listed on this website are personal
                   favorite spots of locals. We don't accept any advertisement
-                  and we recommend places based only on quality.
+                  and we recommend places based on the quality of theis service.
                 </p>
               </div>
               <div className={classes.imageContainer}>
@@ -61,9 +56,9 @@ const AboutSection: React.FC<AboutProps> = ({ myRef }) => {
               <div className={classes.textContainer}>
                 <h2>Curated list</h2>
                 <p>
-                  We try to keep our list updated and as small as possible. We
-                  only recommend "hidden-gems" that can be hard to be found with
-                  an easy google search
+                  We try to keep our list up to date and as short as possible.
+                  We only recommend "hidden-gems" that can be hard to be found
+                  with an easy google search.
                 </p>
               </div>
               <div className={classes.imageContainer}>
