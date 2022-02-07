@@ -13,7 +13,7 @@
   <p align="center">
     A curated list of the most budget-friendly places in Saranda, Albania. <br/> This is a non-profit project created from volunteers. Our mission is to help visitors avoid tourist-traps and to reward small business owners, who don't inflect their prices during high-season. 
     <br />
-    <a href="https://github.com/vbit27/recipe-app"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/vbit27/local-guide"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://local-guide.netlify.app/" target="_blank">View Demo</a>
@@ -76,7 +76,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 - Get an API key at [Google Map API](https://developers.google.com/maps)
-  (Google API is not for free but it has free monthly quote)
+  (Google API is not for free but it has a free monthly quote)
 - Activate **Maps JavaScript API** and **Places API** inside the dashboard
 
 ### Installation
@@ -119,7 +119,6 @@ If you have a suggestion that would make this better, please fork the repo and c
 - Create a preview image
   https://www.youtube.com/watch?v=PjpPJfolInU&ab_channel=%C3%87elikK%C3%B6seo%C4%9Flu
 - Close popup window when changing chategory
-- Create font universal font sizes
 
 <!-- LICENSE -->
 
