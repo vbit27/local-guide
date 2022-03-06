@@ -11,7 +11,7 @@
   <h3 align="center">Local Guide</h3>
 
   <p align="center">
-    A curated list of the most budget-friendly places in Saranda, Albania. <br/> This is a non-profit project created by volunteers. Our mission is to help visitors avoid tourist traps and to reward small business owners, who don't inflect their prices during high season. 
+    A curated list of the most budget-friendly places in Saranda, Albania. <br/> This is a non-profit project created by volunteers. Our mission is to help visitors avoid tourist traps and to reward small business owners, who don't inflect their prices during high  season. 
     <br />
     <a href="https://github.com/vbit27/local-guide"><strong>Explore the docs »</strong></a>
     <br />
